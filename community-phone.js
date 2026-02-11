@@ -12,46 +12,46 @@ document.addEventListener('DOMContentLoaded', function () {
         meta: {
             name: 'Meta Ads',
             color: '#1877F2',
-            weeklySpend: 40000,
-            cpm: 12,
-            ctr: 1.2,
-            lpCvr: 8,
-            trialCvr: 15,
-            churn: 5,
-            avgRevenue: 35
+            weeklySpend: 12000,
+            cpm: 14,
+            ctr: 0.9,
+            lpCvr: 5,
+            trialCvr: 12,
+            churn: 7,
+            avgRevenue: 70
         },
         tiktok: {
             name: 'TikTok Ads',
             color: '#fe2c55',
             weeklySpend: 20000,
-            cpm: 8,
-            ctr: 0.8,
-            lpCvr: 5,
-            trialCvr: 10,
-            churn: 6,
-            avgRevenue: 35
+            cpm: 10,
+            ctr: 0.5,
+            lpCvr: 3,
+            trialCvr: 8,
+            churn: 7,
+            avgRevenue: 70
         },
         influencer: {
             name: 'Influencer / Affiliate',
             color: '#E1306C',
             weeklySpend: 10000,
-            cpm: 15,
-            ctr: 2.5,
-            lpCvr: 12,
-            trialCvr: 20,
-            churn: 4,
-            avgRevenue: 35
+            cpm: 18,
+            ctr: 1.8,
+            lpCvr: 9,
+            trialCvr: 16,
+            churn: 5,
+            avgRevenue: 70
         },
         youtube: {
             name: 'YouTube / CTV',
             color: '#FF0000',
             weeklySpend: 5000,
-            cpm: 25,
-            ctr: 0.5,
-            lpCvr: 6,
-            trialCvr: 12,
-            churn: 5,
-            avgRevenue: 35
+            cpm: 30,
+            ctr: 0.4,
+            lpCvr: 4,
+            trialCvr: 9,
+            churn: 6,
+            avgRevenue: 70
         }
     };
 
@@ -59,41 +59,81 @@ document.addEventListener('DOMContentLoaded', function () {
         conservative: {
             globalGrowth: 2,
             channels: {
-                meta:       { weeklySpend: 30000, cpm: 14, ctr: 0.9,  lpCvr: 6,  trialCvr: 12, churn: 6, avgRevenue: 35 },
-                tiktok:     { weeklySpend: 15000, cpm: 10, ctr: 0.6,  lpCvr: 4,  trialCvr: 8,  churn: 7, avgRevenue: 35 },
-                influencer: { weeklySpend: 8000,  cpm: 18, ctr: 2.0,  lpCvr: 9,  trialCvr: 15, churn: 5, avgRevenue: 35 },
-                youtube:    { weeklySpend: 4000,  cpm: 30, ctr: 0.4,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 35 }
+                meta:       { weeklySpend: 8000,  cpm: 16, ctr: 0.7,  lpCvr: 3.5, trialCvr: 10, churn: 8,  avgRevenue: 70 },
+                tiktok:     { weeklySpend: 5000,  cpm: 12, ctr: 0.4,  lpCvr: 2.5, trialCvr: 6,  churn: 9,  avgRevenue: 70 },
+                influencer: { weeklySpend: 3000,  cpm: 20, ctr: 1.5,  lpCvr: 7,   trialCvr: 12, churn: 6,  avgRevenue: 70 },
+                youtube:    { weeklySpend: 3000,  cpm: 35, ctr: 0.3,  lpCvr: 3,   trialCvr: 7,  churn: 7,  avgRevenue: 70 }
             }
         },
         base: {
-            globalGrowth: 5,
+            globalGrowth: 3,
             channels: {
-                meta:       { weeklySpend: 40000, cpm: 12, ctr: 1.2,  lpCvr: 8,  trialCvr: 15, churn: 5, avgRevenue: 35 },
-                tiktok:     { weeklySpend: 20000, cpm: 8,  ctr: 0.8,  lpCvr: 5,  trialCvr: 10, churn: 6, avgRevenue: 35 },
-                influencer: { weeklySpend: 10000, cpm: 15, ctr: 2.5,  lpCvr: 12, trialCvr: 20, churn: 4, avgRevenue: 35 },
-                youtube:    { weeklySpend: 5000,  cpm: 25, ctr: 0.5,  lpCvr: 6,  trialCvr: 12, churn: 5, avgRevenue: 35 }
+                meta:       { weeklySpend: 12000, cpm: 14, ctr: 0.9,  lpCvr: 5,  trialCvr: 12, churn: 7, avgRevenue: 70 },
+                tiktok:     { weeklySpend: 8000,  cpm: 10, ctr: 0.5,  lpCvr: 3,  trialCvr: 8,  churn: 7, avgRevenue: 70 },
+                influencer: { weeklySpend: 5000,  cpm: 18, ctr: 1.8,  lpCvr: 9,  trialCvr: 16, churn: 5, avgRevenue: 70 },
+                youtube:    { weeklySpend: 5000,  cpm: 30, ctr: 0.4,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 70 }
             }
         },
         aggressive: {
-            globalGrowth: 10,
+            globalGrowth: 7,
             channels: {
-                meta:       { weeklySpend: 50000, cpm: 10, ctr: 1.5,  lpCvr: 10, trialCvr: 18, churn: 4, avgRevenue: 35 },
-                tiktok:     { weeklySpend: 30000, cpm: 7,  ctr: 1.0,  lpCvr: 7,  trialCvr: 13, churn: 5, avgRevenue: 35 },
-                influencer: { weeklySpend: 15000, cpm: 12, ctr: 3.0,  lpCvr: 14, trialCvr: 25, churn: 3, avgRevenue: 35 },
-                youtube:    { weeklySpend: 8000,  cpm: 20, ctr: 0.7,  lpCvr: 8,  trialCvr: 15, churn: 4, avgRevenue: 35 }
+                meta:       { weeklySpend: 18000, cpm: 12, ctr: 1.2,  lpCvr: 8,  trialCvr: 15, churn: 5, avgRevenue: 70 },
+                tiktok:     { weeklySpend: 12000, cpm: 8,  ctr: 0.8,  lpCvr: 5,  trialCvr: 10, churn: 6, avgRevenue: 70 },
+                influencer: { weeklySpend: 8000,  cpm: 15, ctr: 2.5,  lpCvr: 12, trialCvr: 20, churn: 4, avgRevenue: 70 },
+                youtube:    { weeklySpend: 8000,  cpm: 25, ctr: 0.5,  lpCvr: 6,  trialCvr: 12, churn: 5, avgRevenue: 70 }
             }
         }
     };
 
     const ICE_ITEMS = [
-        { initiative: 'Launch Meta Ads for Family/Senior Targeting', desc: 'Carousel + video creative on Facebook & Instagram targeting key demos', impact: 9, confidence: 8, ease: 8 },
-        { initiative: 'Creative Testing System', desc: 'Structured hypothesis → produce → test → iterate framework across channels', impact: 9, confidence: 9, ease: 7 },
-        { initiative: 'TikTok Creative Testing Program', desc: 'UGC-style and product demo ads targeting younger demographics', impact: 8, confidence: 6, ease: 7 },
-        { initiative: 'Landing Page Optimization for Non-Google Traffic', desc: 'Dedicated LPs per channel with tailored messaging and social proof', impact: 8, confidence: 8, ease: 8 },
-        { initiative: 'Influencer Partnerships', desc: 'Family and tech YouTube/Instagram reviewers with trackable promo codes', impact: 8, confidence: 7, ease: 5 },
-        { initiative: 'Affiliate / Referral Channel Buildout', desc: 'Commission-based program for existing customers and partners', impact: 7, confidence: 7, ease: 6 },
-        { initiative: 'YouTube Pre-Roll / Connected TV', desc: 'Video ads on YouTube and CTV platforms for broad awareness reach', impact: 7, confidence: 5, ease: 6 },
-        { initiative: 'Direct Mail Retargeting', desc: 'Physical mailers to high-intent website visitors and abandoned signups', impact: 6, confidence: 5, ease: 4 }
+        {
+            initiative: 'Launch Meta Ads for Family/Senior Targeting',
+            desc: 'Carousel + video creative on Facebook & Instagram targeting key demos',
+            rationale: 'Impact 9: Meta has the largest addressable audience in CP\'s core demo (families, 35-65). Confidence 8: well-understood platform with deep targeting options and reliable benchmarks. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
+            impact: 9, confidence: 8, ease: 8
+        },
+        {
+            initiative: 'YouTube Pre-Roll / Connected TV',
+            desc: 'Video ads on YouTube and CTV platforms targeting family and senior households',
+            rationale: 'Impact 6: CTV is an awareness channel, not a direct response driver. Weak standalone unit economics, but valuable as the top of a multi-channel funnel that feeds direct mail and retargeting. Confidence 6: attribution is murkier for awareness plays, harder to measure true incremental lift. Ease 8: programmatic buying makes launch straightforward, creative can be repurposed from Meta.',
+            impact: 6, confidence: 6, ease: 8
+        },
+        {
+            initiative: 'Creative Testing System',
+            desc: 'Structured hypothesis, produce, test, iterate framework across all channels',
+            rationale: 'Impact 9: creative is the primary lever when you\'re building a new channel. A system for producing and testing at volume compounds everything else. Confidence 9: this is a process, not a bet. Ease 7: requires setup (naming conventions, thresholds, kill criteria) but no media spend.',
+            impact: 9, confidence: 9, ease: 7
+        },
+        {
+            initiative: 'Landing Page Optimization for Non-Google Traffic',
+            desc: 'Dedicated LPs per channel with tailored messaging and social proof',
+            rationale: 'Impact 8: sending paid traffic to a generic page kills conversion. Channel-specific LPs can 2-3x CVR. Confidence 8: LP optimization is well-proven and measurable within days. Ease 8: fast to spin up with a page builder, low resource cost.',
+            impact: 8, confidence: 8, ease: 8
+        },
+        {
+            initiative: 'Direct Mail Retargeting',
+            desc: 'Physical mailers to high-intent website visitors and abandoned signups',
+            rationale: 'Impact 6: narrow audience (retargeting only) caps the volume ceiling, but high intent means strong per-piece conversion. Confidence 6: less common channel with fewer benchmarks, though the audience is pre-qualified. Ease 7: vendors handle fulfillment, mainly requires pixel integration and creative.',
+            impact: 6, confidence: 6, ease: 7
+        },
+        {
+            initiative: 'Affiliate / Referral Channel Buildout',
+            desc: 'Commission-based program for existing customers and partners',
+            rationale: 'Impact 6: scalable long-term but slow to build initial volume, unlikely to move the needle in the first 6 months. Confidence 7: performance-based model means low risk, and existing customers are a warm starting point. Ease 5: requires building program infrastructure, tracking, commission structure, and ongoing partner recruitment.',
+            impact: 6, confidence: 7, ease: 5
+        },
+        {
+            initiative: 'Influencer Partnerships',
+            desc: 'Family and tech YouTube/Instagram reviewers with trackable promo codes',
+            rationale: 'Impact 7: authentic endorsements convert well for trust-dependent products like home phone service. Confidence 7: trackable via promo codes, performance is measurable quickly. Ease 6: requires outreach and content coordination, but platforms like Creator Marketplace streamline the process.',
+            impact: 7, confidence: 7, ease: 6
+        },
+        {
+            initiative: 'TikTok Creative Testing Program',
+            desc: 'UGC-style and product demo ads on TikTok',
+            rationale: 'Impact 5: TikTok\'s core demo skews younger than CP\'s target audience (families, seniors). Potential upside if creative resonates, but not the primary channel. Confidence 5: limited data on TikTok performance for this product category and age group. Ease 7: low CPMs and easy to launch, good for low-cost experimentation.',
+            impact: 5, confidence: 5, ease: 7
+        }
     ];
 
     // ===================================
@@ -105,9 +145,10 @@ document.addEventListener('DOMContentLoaded', function () {
         channelConfigs[key] = { ...CHANNEL_DEFAULTS[key] };
     });
 
-    let globalBudget = 300000;
-    let globalHorizon = 20;
-    let globalGrowth = 5;
+    let channelEnabled = { meta: true, tiktok: false, influencer: false, youtube: true };
+    let globalBudget = 75000;
+    let globalHorizon = 26;
+    let globalGrowth = 3;
 
     // ===================================
     // CALCULATOR ENGINE
@@ -231,6 +272,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function recalculate() {
         const allProjections = {};
         Object.keys(channelConfigs).forEach(key => {
+            if (!channelEnabled[key]) return;
             allProjections[key] = channelModel(channelConfigs[key], globalHorizon, globalGrowth);
         });
 
@@ -239,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         renderMetricCards(metrics);
         renderTargetIndicator(metrics.totalMRR);
+        renderFunnelTable(allProjections);
         renderChart(allProjections, globalHorizon);
         renderDonut(metrics.channelMetrics);
         renderComparisonTable(metrics.channelMetrics);
@@ -347,6 +390,77 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         value.textContent = formatCurrency(totalMRR);
+    }
+
+    // ===================================
+    // RENDERING: Funnel Breakdown Table
+    // ===================================
+
+    function formatNumber(val) {
+        if (val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+        if (val >= 1000) return Math.round(val).toLocaleString();
+        return Math.round(val).toLocaleString();
+    }
+
+    function renderFunnelTable(allProjections) {
+        var tbody = document.getElementById('funnelBody');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+
+        var totals = { impressions: 0, clicks: 0, leads: 0, customers: 0 };
+
+        Object.entries(allProjections).forEach(function (entry) {
+            var key = entry[0];
+            var proj = entry[1];
+            var config = channelConfigs[key];
+
+            var impressions = 0, clicks = 0, leads = 0, customers = 0;
+            proj.forEach(function (week) {
+                impressions += week.impressions;
+                clicks += week.clicks;
+                leads += week.leads;
+                customers += week.newCustomers;
+            });
+
+            totals.impressions += impressions;
+            totals.clicks += clicks;
+            totals.leads += leads;
+            totals.customers += customers;
+
+            var ctr = impressions > 0 ? (clicks / impressions * 100).toFixed(1) + '%' : '0%';
+            var lpCvr = clicks > 0 ? (leads / clicks * 100).toFixed(1) + '%' : '0%';
+            var trialCvr = leads > 0 ? (customers / leads * 100).toFixed(1) + '%' : '0%';
+
+            var tr = document.createElement('tr');
+            tr.innerHTML =
+                '<td><span class="channel-name"><span class="channel-dot" style="background:' + config.color + '"></span>' + config.name + '</span></td>' +
+                '<td>' + formatNumber(impressions) + '</td>' +
+                '<td class="funnel-arrow"><span class="funnel-rate">' + ctr + '</span></td>' +
+                '<td>' + formatNumber(clicks) + '</td>' +
+                '<td class="funnel-arrow"><span class="funnel-rate">' + lpCvr + '</span></td>' +
+                '<td>' + formatNumber(leads) + '</td>' +
+                '<td class="funnel-arrow"><span class="funnel-rate">' + trialCvr + '</span></td>' +
+                '<td>' + formatNumber(customers) + '</td>';
+            tbody.appendChild(tr);
+        });
+
+        // Total row
+        var totalCtr = totals.impressions > 0 ? (totals.clicks / totals.impressions * 100).toFixed(1) + '%' : '0%';
+        var totalLpCvr = totals.clicks > 0 ? (totals.leads / totals.clicks * 100).toFixed(1) + '%' : '0%';
+        var totalTrialCvr = totals.leads > 0 ? (totals.customers / totals.leads * 100).toFixed(1) + '%' : '0%';
+
+        var totalTr = document.createElement('tr');
+        totalTr.className = 'funnel-total-row';
+        totalTr.innerHTML =
+            '<td><span class="channel-name"><span class="channel-dot" style="background:var(--green-primary)"></span>Total</span></td>' +
+            '<td>' + formatNumber(totals.impressions) + '</td>' +
+            '<td class="funnel-arrow"><span class="funnel-rate">' + totalCtr + '</span></td>' +
+            '<td>' + formatNumber(totals.clicks) + '</td>' +
+            '<td class="funnel-arrow"><span class="funnel-rate">' + totalLpCvr + '</span></td>' +
+            '<td>' + formatNumber(totals.leads) + '</td>' +
+            '<td class="funnel-arrow"><span class="funnel-rate">' + totalTrialCvr + '</span></td>' +
+            '<td>' + formatNumber(totals.customers) + '</td>';
+        tbody.appendChild(totalTr);
     }
 
     // ===================================
@@ -643,11 +757,32 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // Global budget
+        // Global budget — scales all channel weekly spends proportionally
         const budgetSlider = document.getElementById('globalBudget');
         if (budgetSlider) {
             budgetSlider.addEventListener('input', function () {
-                globalBudget = parseInt(this.value);
+                var newBudget = parseInt(this.value);
+                var currentTotal = 0;
+                Object.keys(channelConfigs).forEach(function (key) {
+                    if (channelEnabled[key]) currentTotal += channelConfigs[key].weeklySpend * 4.33;
+                });
+                if (currentTotal === 0) currentTotal = 1;
+                var ratio = newBudget / currentTotal;
+
+                Object.keys(channelConfigs).forEach(function (key) {
+                    if (!channelEnabled[key]) return;
+                    var newSpend = Math.round(channelConfigs[key].weeklySpend * ratio / 1000) * 1000;
+                    if (newSpend < 1000) newSpend = 1000;
+                    channelConfigs[key].weeklySpend = newSpend;
+
+                    var slider = document.querySelector('.channel-input[data-channel="' + key + '"][data-metric="weeklySpend"]');
+                    if (slider) {
+                        slider.value = newSpend;
+                        slider.parentElement.querySelector('.slider-value').textContent = '$' + newSpend.toLocaleString();
+                    }
+                });
+
+                globalBudget = newBudget;
                 document.getElementById('globalBudgetValue').textContent = '$' + globalBudget.toLocaleString();
                 recalculate();
             });
@@ -678,8 +813,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // ===================================
 
     function initTabs() {
+        // Tab click — switch panel (ignore clicks on the toggle itself)
         document.querySelectorAll('.channel-tab').forEach(tab => {
-            tab.addEventListener('click', function () {
+            tab.addEventListener('click', function (e) {
+                if (e.target.closest('.channel-toggle')) return;
                 const channel = this.dataset.channel;
 
                 document.querySelectorAll('.channel-tab').forEach(t => t.classList.remove('active'));
@@ -687,6 +824,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 document.querySelectorAll('.channel-panel').forEach(p => p.classList.remove('active'));
                 document.getElementById('panel-' + channel).classList.add('active');
+            });
+        });
+
+        // Toggle switches — enable/disable channels
+        document.querySelectorAll('.channel-enabled').forEach(function (toggle) {
+            toggle.addEventListener('change', function () {
+                var channel = this.dataset.channel;
+                channelEnabled[channel] = this.checked;
+                var tab = this.closest('.channel-tab');
+                if (this.checked) {
+                    tab.classList.remove('disabled');
+                } else {
+                    tab.classList.add('disabled');
+                }
+                recalculate();
             });
         });
     }
@@ -754,7 +906,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const tr = document.createElement('tr');
             tr.innerHTML =
-                '<td><div class="ice-initiative">' + item.initiative + '</div><div class="ice-initiative-desc">' + item.desc + '</div></td>' +
+                '<td><div class="ice-initiative">' + item.initiative + '</div><div class="ice-initiative-desc">' + item.desc + '</div><div class="ice-rationale">' + item.rationale + '</div></td>' +
                 '<td class="ice-score-cell"><input type="number" class="ice-score-input" min="1" max="10" value="' + item.impact + '" data-idx="' + ICE_ITEMS.indexOf(item) + '" data-field="impact"></td>' +
                 '<td class="ice-score-cell"><input type="number" class="ice-score-input" min="1" max="10" value="' + item.confidence + '" data-idx="' + ICE_ITEMS.indexOf(item) + '" data-field="confidence"></td>' +
                 '<td class="ice-score-cell"><input type="number" class="ice-score-input" min="1" max="10" value="' + item.ease + '" data-idx="' + ICE_ITEMS.indexOf(item) + '" data-field="ease"></td>' +

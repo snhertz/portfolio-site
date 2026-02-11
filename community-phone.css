@@ -459,6 +459,50 @@ body::before {
    SECTION 3: ICE FRAMEWORK
    =================================== */
 
+.ice-scales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.ice-scale-card {
+    background: var(--dark-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.ice-scale-card h4 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.ice-scale-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.ice-scale-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ice-scale-card li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.ice-scale-card li strong {
+    color: var(--green-primary);
+    font-family: var(--font-display);
+}
+
 .ice-legend {
     display: flex;
     gap: 24px;
@@ -546,6 +590,17 @@ body::before {
     font-size: 13px;
     color: var(--text-muted);
     margin-top: 4px;
+}
+
+.ice-rationale {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    line-height: 1.6;
+    padding: 10px 12px;
+    background: var(--dark-bg);
+    border-radius: 6px;
+    border: 1px solid var(--border-subtle);
 }
 
 .ice-score-cell {
@@ -711,8 +766,13 @@ body::before {
     gap: 8px;
 }
 
-.scenario-btn {
+.scenario-btn-wrapper {
     flex: 1;
+    position: relative;
+}
+
+.scenario-btn {
+    width: 100%;
     padding: 12px 16px;
     background: var(--dark-bg);
     border: 1px solid var(--border-subtle);
@@ -723,6 +783,39 @@ body::before {
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-base);
+}
+
+.scenario-tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    padding: 12px 14px;
+    background: var(--dark-elevated);
+    border: 1px solid var(--border-medium);
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow-lg);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.scenario-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--border-medium);
+}
+
+.scenario-btn-wrapper:hover .scenario-tooltip {
+    display: block;
 }
 
 .scenario-btn:hover {
@@ -776,10 +869,66 @@ body::before {
     background: var(--dark-elevated);
 }
 
+/* Channel Toggle */
+.channel-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.channel-toggle input {
+    display: none;
+}
+
+.toggle-track {
+    width: 32px;
+    height: 18px;
+    background: var(--dark-bg);
+    border: 1px solid var(--border-medium);
+    border-radius: 9px;
+    position: relative;
+    transition: all var(--transition-base);
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    transition: all var(--transition-base);
+}
+
+.channel-toggle input:checked + .toggle-track {
+    background: rgba(34, 170, 110, 0.2);
+    border-color: var(--green-primary);
+}
+
+.channel-toggle input:checked + .toggle-track .toggle-thumb {
+    left: 16px;
+    background: var(--green-primary);
+}
+
+.channel-tab.disabled {
+    opacity: 0.4;
+}
+
+.channel-tab.disabled .channel-tab-dot {
+    background: var(--text-muted) !important;
+}
+
+.channel-tab-label {
+    pointer-events: none;
+}
+
 .channel-tab-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    pointer-events: none;
 }
 
 .channel-tab-dot.meta { background: var(--meta-color); }
@@ -1031,6 +1180,96 @@ body::before {
     width: 10px;
     height: 10px;
     border-radius: 3px;
+}
+
+/* Funnel Breakdown Table */
+.funnel-container {
+    background: var(--dark-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+}
+
+.funnel-period {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.funnel-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.funnel-table th {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.funnel-table td {
+    font-size: 15px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-weight: 500;
+}
+
+.funnel-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.funnel-table .channel-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.funnel-table .channel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.funnel-arrow {
+    text-align: center;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    width: 50px;
+}
+
+.funnel-rate {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--green-primary);
+    background: rgba(34, 170, 110, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.funnel-total-row td {
+    border-top: 2px solid var(--border-medium);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.funnel-total-row .funnel-rate {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 /* Donut & Table Layout */
@@ -1464,6 +1703,10 @@ body::before {
    =================================== */
 
 @media (max-width: 1024px) {
+    .ice-scales {
+        grid-template-columns: 1fr;
+    }
+
     .stat-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1564,6 +1807,16 @@ body::before {
     .comparison-table td {
         font-size: 13px;
         padding: 10px 8px;
+    }
+
+    .funnel-table th,
+    .funnel-table td {
+        font-size: 13px;
+        padding: 10px 8px;
+    }
+
+    .funnel-container {
+        padding: 20px;
     }
 
     .donut-and-table {
