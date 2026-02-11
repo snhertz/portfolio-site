@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Growth Model for Community Phone | Nick Hertzman</title>
+    <meta name="description" content="An interactive growth calculator and strategic brief for Community Phone's next scalable acquisition channel.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Google Fonts (same as main site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="community-phone.css">
+</head>
+<body>
+    <!-- Fixed Header Bar -->
+    <div class="fixed-header"></div>
+
+    <!-- Persistent Path to $100K Bar -->
+    <div class="path-bar" id="pathBar">
+        <div class="path-bar-inner">
+            <span class="path-bar-label">Path to $100K MRR</span>
+            <div class="path-bar-track">
+                <div class="path-bar-fill" id="pathBarFill"></div>
+            </div>
+            <span class="path-bar-value" id="pathBarValue">$0</span>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="page-wrapper">
+
+        <!-- ===== SECTION 1: HERO ===== -->
+        <section class="section hero-section" id="hero">
+            <div class="container">
+                <div class="hero-badge">Strategic Growth Brief</div>
+                <h1 class="hero-title">A Growth Model for <span class="highlight">Community Phone</span></h1>
+                <p class="hero-subtitle">How I'd approach building your next scalable acquisition channel — from $0 to $100K MRR</p>
+                <div class="hero-meta">
+                    <span class="hero-meta-item">Nick Hertzman</span>
+                    <span class="hero-meta-divider">/</span>
+                    <span class="hero-meta-item">Growth Lead Candidate</span>
+                    <span class="hero-meta-divider">/</span>
+                    <span class="hero-meta-item">February 2026</span>
+                </div>
+                <p class="hero-intro">I built this interactive model to show how I think about channel expansion — not as a pitch deck, but as a working tool. Every number is adjustable. The framework is real. I used this same methodology on a paid assessment for another company and wanted to show how I'd apply it to Community Phone's specific growth challenge.</p>
+                <a href="#challenge" class="scroll-cta">
+                    <span>Explore the model</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: THE CHALLENGE ===== -->
+        <section class="section challenge-section" id="challenge">
+            <div class="container">
+                <h2 class="section-title">The Challenge</h2>
+                <p class="section-description">Community Phone has built a strong foundation — 8-figure ARR, 25K+ customers, and a proven product. But growth is concentrated in a single channel. The next phase requires opening new, scalable acquisition channels that can operate independently of Google.</p>
+
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number" data-target="8">8</div>
+                        <div class="stat-label">Figure ARR</div>
+                        <div class="stat-detail">Proven product-market fit with strong revenue foundation</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number">25K+</div>
+                        <div class="stat-label">Customers</div>
+                        <div class="stat-detail">Large base validates demand across demographics</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number">$300K</div>
+                        <div class="stat-label">Monthly Budget</div>
+                        <div class="stat-detail">Significant capital to deploy into new channels at scale</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number">90 Days</div>
+                        <div class="stat-label">Target Timeline</div>
+                        <div class="stat-detail">$100K new MRR/month from non-Google channels</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: ICE FRAMEWORK ===== -->
+        <section class="section ice-section" id="framework">
+            <div class="container">
+                <h2 class="section-title">The Framework</h2>
+                <p class="section-description">Before spending a dollar, I prioritize initiatives using the ICE framework — Impact, Confidence, and Ease. Each score is editable. Click any cell to adjust, and the table will re-sort by total score automatically.</p>
+
+                <div class="ice-legend">
+                    <div class="ice-legend-item">
+                        <span class="ice-legend-dot high"></span>
+                        <span>High Priority (24+)</span>
+                    </div>
+                    <div class="ice-legend-item">
+                        <span class="ice-legend-dot medium"></span>
+                        <span>Medium Priority (18-23)</span>
+                    </div>
+                    <div class="ice-legend-item">
+                        <span class="ice-legend-dot low"></span>
+                        <span>Lower Priority (&lt;18)</span>
+                    </div>
+                </div>
+
+                <div class="ice-table-wrapper">
+                    <table class="ice-table" id="iceTable">
+                        <thead>
+                            <tr>
+                                <th class="ice-th-initiative">Initiative</th>
+                                <th class="ice-th-score">Impact</th>
+                                <th class="ice-th-score">Confidence</th>
+                                <th class="ice-th-score">Ease</th>
+                                <th class="ice-th-total">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="iceBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: INTERACTIVE CALCULATOR ===== -->
+        <section class="section calculator-section" id="calculator">
+            <div class="container">
+                <h2 class="section-title">The Growth Model</h2>
+                <p class="section-description">This is a fully interactive multi-channel growth model. Adjust any input and watch the projections update in real time. Every slider is tunable to match Community Phone's actual data.</p>
+
+                <!-- Global Controls -->
+                <div class="global-controls">
+                    <div class="global-control">
+                        <label>Total Monthly Budget</label>
+                        <div class="slider-group">
+                            <input type="range" id="globalBudget" min="50000" max="500000" step="10000" value="300000">
+                            <span class="slider-value" id="globalBudgetValue">$300,000</span>
+                        </div>
+                    </div>
+                    <div class="global-control">
+                        <label>Planning Horizon</label>
+                        <select id="globalHorizon">
+                            <option value="12">12 Weeks</option>
+                            <option value="20" selected>20 Weeks</option>
+                            <option value="26">26 Weeks</option>
+                        </select>
+                    </div>
+                    <div class="global-control">
+                        <label>Week-over-Week Spend Growth</label>
+                        <div class="slider-group">
+                            <input type="range" id="globalGrowth" min="0" max="15" step="0.5" value="5">
+                            <span class="slider-value" id="globalGrowthValue">5.0%</span>
+                        </div>
+                    </div>
+                    <div class="global-control scenario-control">
+                        <label>Scenario Presets</label>
+                        <div class="scenario-buttons">
+                            <button class="scenario-btn" data-scenario="conservative">Conservative</button>
+                            <button class="scenario-btn active" data-scenario="base">Base</button>
+                            <button class="scenario-btn" data-scenario="aggressive">Aggressive</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channel Tabs -->
+                <div class="channel-tabs">
+                    <button class="channel-tab active" data-channel="meta">
+                        <span class="channel-tab-dot meta"></span>
+                        Meta Ads
+                    </button>
+                    <button class="channel-tab" data-channel="tiktok">
+                        <span class="channel-tab-dot tiktok"></span>
+                        TikTok Ads
+                    </button>
+                    <button class="channel-tab" data-channel="influencer">
+                        <span class="channel-tab-dot influencer"></span>
+                        Influencer / Affiliate
+                    </button>
+                    <button class="channel-tab" data-channel="youtube">
+                        <span class="channel-tab-dot youtube"></span>
+                        YouTube / CTV
+                    </button>
+                </div>
+
+                <!-- Channel Input Panels -->
+                <div class="channel-panels">
+                    <!-- Meta Panel -->
+                    <div class="channel-panel active" id="panel-meta">
+                        <div class="panel-header meta">
+                            <h3>Meta Ads</h3>
+                            <p>Family & senior targeting via carousel, video, and static creative formats</p>
+                        </div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Weekly Starting Spend</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="meta" data-metric="weeklySpend" min="1000" max="100000" step="1000" value="40000">
+                                    <span class="slider-value">$40,000</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CPM <span class="benchmark">Benchmark: $10-15</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="meta" data-metric="cpm" min="3" max="40" step="0.5" value="12">
+                                    <span class="slider-value">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CTR <span class="benchmark">Benchmark: 0.9-1.5%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="meta" data-metric="ctr" min="0.1" max="5" step="0.1" value="1.2">
+                                    <span class="slider-value">1.2%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Landing Page CVR <span class="benchmark">Benchmark: 5-12%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="meta" data-metric="lpCvr" min="1" max="25" step="0.5" value="8">
+                                    <span class="slider-value">8.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Trial-to-Paid CVR <span class="benchmark">Benchmark: 10-20%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="meta" data-metric="trialCvr" min="1" max="40" step="1" value="15">
+                                    <span class="slider-value">15%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Monthly Churn Rate <span class="benchmark">Benchmark: 3-7%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="meta" data-metric="churn" min="1" max="15" step="0.5" value="5">
+                                    <span class="slider-value">5.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Avg Monthly Revenue / Customer</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="meta" data-metric="avgRevenue" min="10" max="100" step="1" value="35">
+                                    <span class="slider-value">$35</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TikTok Panel -->
+                    <div class="channel-panel" id="panel-tiktok">
+                        <div class="panel-header tiktok">
+                            <h3>TikTok Ads</h3>
+                            <p>Creative-first approach targeting younger demographics with viral potential</p>
+                        </div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Weekly Starting Spend</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="tiktok" data-metric="weeklySpend" min="1000" max="100000" step="1000" value="20000">
+                                    <span class="slider-value">$20,000</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CPM <span class="benchmark">Benchmark: $5-12</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="tiktok" data-metric="cpm" min="3" max="40" step="0.5" value="8">
+                                    <span class="slider-value">$8.00</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CTR <span class="benchmark">Benchmark: 0.5-1.2%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="tiktok" data-metric="ctr" min="0.1" max="5" step="0.1" value="0.8">
+                                    <span class="slider-value">0.8%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Landing Page CVR <span class="benchmark">Benchmark: 3-8%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="tiktok" data-metric="lpCvr" min="1" max="25" step="0.5" value="5">
+                                    <span class="slider-value">5.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Trial-to-Paid CVR <span class="benchmark">Benchmark: 7-15%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="tiktok" data-metric="trialCvr" min="1" max="40" step="1" value="10">
+                                    <span class="slider-value">10%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Monthly Churn Rate <span class="benchmark">Benchmark: 4-8%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="tiktok" data-metric="churn" min="1" max="15" step="0.5" value="6">
+                                    <span class="slider-value">6.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Avg Monthly Revenue / Customer</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="tiktok" data-metric="avgRevenue" min="10" max="100" step="1" value="35">
+                                    <span class="slider-value">$35</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Influencer Panel -->
+                    <div class="channel-panel" id="panel-influencer">
+                        <div class="panel-header influencer">
+                            <h3>Influencer / Affiliate</h3>
+                            <p>Partnership-based, content-driven acquisition through family & tech reviewers</p>
+                        </div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Weekly Starting Spend</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="influencer" data-metric="weeklySpend" min="1000" max="100000" step="1000" value="10000">
+                                    <span class="slider-value">$10,000</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CPM <span class="benchmark">Benchmark: $10-20</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="influencer" data-metric="cpm" min="3" max="40" step="0.5" value="15">
+                                    <span class="slider-value">$15.00</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CTR <span class="benchmark">Benchmark: 1.5-4%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="influencer" data-metric="ctr" min="0.1" max="5" step="0.1" value="2.5">
+                                    <span class="slider-value">2.5%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Landing Page CVR <span class="benchmark">Benchmark: 8-15%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="influencer" data-metric="lpCvr" min="1" max="25" step="0.5" value="12">
+                                    <span class="slider-value">12.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Trial-to-Paid CVR <span class="benchmark">Benchmark: 15-25%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="influencer" data-metric="trialCvr" min="1" max="40" step="1" value="20">
+                                    <span class="slider-value">20%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Monthly Churn Rate <span class="benchmark">Benchmark: 2-6%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="influencer" data-metric="churn" min="1" max="15" step="0.5" value="4">
+                                    <span class="slider-value">4.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Avg Monthly Revenue / Customer</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="influencer" data-metric="avgRevenue" min="10" max="100" step="1" value="35">
+                                    <span class="slider-value">$35</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Panel -->
+                    <div class="channel-panel" id="panel-youtube">
+                        <div class="panel-header youtube">
+                            <h3>YouTube / CTV</h3>
+                            <p>Pre-roll ads and connected TV placements for broad reach awareness</p>
+                        </div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Weekly Starting Spend</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="weeklySpend" min="1000" max="100000" step="1000" value="5000">
+                                    <span class="slider-value">$5,000</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CPM <span class="benchmark">Benchmark: $15-35</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="cpm" min="3" max="50" step="0.5" value="25">
+                                    <span class="slider-value">$25.00</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CTR <span class="benchmark">Benchmark: 0.3-0.8%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="ctr" min="0.1" max="5" step="0.1" value="0.5">
+                                    <span class="slider-value">0.5%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Landing Page CVR <span class="benchmark">Benchmark: 4-8%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="lpCvr" min="1" max="25" step="0.5" value="6">
+                                    <span class="slider-value">6.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Trial-to-Paid CVR <span class="benchmark">Benchmark: 8-15%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="trialCvr" min="1" max="40" step="1" value="12">
+                                    <span class="slider-value">12%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Monthly Churn Rate <span class="benchmark">Benchmark: 3-7%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="churn" min="1" max="15" step="0.5" value="5">
+                                    <span class="slider-value">5.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Avg Monthly Revenue / Customer</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="avgRevenue" min="10" max="100" step="1" value="35">
+                                    <span class="slider-value">$35</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output Dashboard -->
+                <div class="dashboard">
+                    <h3 class="dashboard-title">Projected Outcomes</h3>
+
+                    <!-- Key Metrics Cards -->
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Total New MRR</div>
+                            <div class="metric-value" id="metricMRR">$0</div>
+                            <div class="metric-sublabel">at end of horizon</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Blended CAC</div>
+                            <div class="metric-value" id="metricCAC">$0</div>
+                            <div class="metric-sublabel">cost per customer</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Blended LTV</div>
+                            <div class="metric-value" id="metricLTV">$0</div>
+                            <div class="metric-sublabel">lifetime value</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">LTV : CAC</div>
+                            <div class="metric-value" id="metricRatio">0x</div>
+                            <div class="metric-sublabel">target: 3x+</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Payback Period</div>
+                            <div class="metric-value" id="metricPayback">0 mo</div>
+                            <div class="metric-sublabel">months to recover CAC</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Total New Customers</div>
+                            <div class="metric-value" id="metricCustomers">0</div>
+                            <div class="metric-sublabel">active at end of horizon</div>
+                        </div>
+                    </div>
+
+                    <!-- Path to $100K Indicator -->
+                    <div class="target-indicator" id="targetIndicator">
+                        <div class="target-icon" id="targetIcon"></div>
+                        <div class="target-text">
+                            <div class="target-headline" id="targetHeadline">Calculating...</div>
+                            <div class="target-detail" id="targetDetail"></div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue Projection Chart -->
+                    <div class="chart-container">
+                        <h4 class="chart-title">Cumulative New MRR by Week</h4>
+                        <div class="chart-wrapper">
+                            <canvas id="revenueChart" width="900" height="400"></canvas>
+                        </div>
+                        <div class="chart-legend" id="chartLegend"></div>
+                    </div>
+
+                    <!-- Budget Allocation Donut -->
+                    <div class="donut-and-table">
+                        <div class="donut-container">
+                            <h4 class="chart-title">Budget Allocation</h4>
+                            <div class="donut-wrapper">
+                                <canvas id="donutChart" width="280" height="280"></canvas>
+                                <div class="donut-center" id="donutCenter">
+                                    <div class="donut-center-value">$300K</div>
+                                    <div class="donut-center-label">/ month</div>
+                                </div>
+                            </div>
+                            <div class="donut-legend" id="donutLegend"></div>
+                        </div>
+
+                        <!-- Channel Comparison Table -->
+                        <div class="comparison-table-container">
+                            <h4 class="chart-title">Channel Comparison</h4>
+                            <table class="comparison-table" id="comparisonTable">
+                                <thead>
+                                    <tr>
+                                        <th>Channel</th>
+                                        <th>CAC</th>
+                                        <th>LTV</th>
+                                        <th>ROAS</th>
+                                        <th>New Customers</th>
+                                        <th>MRR</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="comparisonBody">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: CASE STUDY ===== -->
+        <section class="section casestudy-section" id="casestudy">
+            <div class="container">
+                <h2 class="section-title">Proof of Methodology</h2>
+                <p class="section-description">This framework isn't theoretical. I built this exact model as a paid assessment for a real company — and it's how I approach every growth problem.</p>
+
+                <div class="casestudy-card">
+                    <div class="casestudy-header">
+                        <div class="casestudy-badge">Paid Hiring Assessment</div>
+                        <h3>Top Nutrition Coaching — Growth Calculator</h3>
+                    </div>
+                    <div class="casestudy-body">
+                        <p>A DTC nutrition coaching company asked me to build a comprehensive growth model as part of their hiring process. I delivered a 10-tab interactive calculator in Google Sheets covering:</p>
+                        <ul class="casestudy-list">
+                            <li>Multi-channel funnel analysis across paid social, organic, partnerships, and referral programs</li>
+                            <li>Week-by-week revenue projections with compounding customer growth and churn modeling</li>
+                            <li>ICE Framework prioritization to rank 12+ growth initiatives by impact, confidence, and ease</li>
+                            <li>Scenario modeling (conservative / base / aggressive) with adjustable assumptions</li>
+                            <li>Unit economics dashboard calculating CAC, LTV, payback period, and ROAS per channel</li>
+                        </ul>
+                        <div class="casestudy-outcome">
+                            <h4>The methodology works because it forces clarity:</h4>
+                            <div class="outcome-grid">
+                                <div class="outcome-item">
+                                    <div class="outcome-label">Structured Prioritization</div>
+                                    <div class="outcome-detail">ICE scoring removes gut-feel from channel selection — every initiative competes on the same scale</div>
+                                </div>
+                                <div class="outcome-item">
+                                    <div class="outcome-label">Transparent Assumptions</div>
+                                    <div class="outcome-detail">Every input is visible and adjustable, so stakeholders can challenge numbers instead of guessing</div>
+                                </div>
+                                <div class="outcome-item">
+                                    <div class="outcome-label">Week-Level Granularity</div>
+                                    <div class="outcome-detail">Monthly models hide too much. Weekly projections catch problems fast and show real growth curves</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: 90-DAY PLAN ===== -->
+        <section class="section plan-section" id="plan">
+            <div class="container">
+                <h2 class="section-title">What I'd Do in 90 Days</h2>
+                <p class="section-description">Here's how I'd take this from model to reality — a phased approach that builds momentum while maintaining analytical rigor at every step.</p>
+
+                <div class="plan-timeline">
+                    <div class="plan-phase">
+                        <div class="plan-phase-header">
+                            <div class="plan-phase-number">01</div>
+                            <div class="plan-phase-range">Days 1–30</div>
+                        </div>
+                        <h3 class="plan-phase-title">Foundation & First Tests</h3>
+                        <ul class="plan-list">
+                            <li>Audit existing acquisition data and attribution setup — understand what's measurable today</li>
+                            <li>Instrument end-to-end tracking (UTMs, conversion API, pixel setup) for Meta, TikTok, and landing pages</li>
+                            <li>Launch first Meta test campaigns: 3-5 ad sets targeting family/senior segments with varied creative angles</li>
+                            <li>Build the creative testing framework: hypothesis format, naming conventions, performance thresholds, kill criteria</li>
+                            <li>Establish baseline CAC and conversion benchmarks from initial campaigns to calibrate the model</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-phase">
+                        <div class="plan-phase-header">
+                            <div class="plan-phase-number">02</div>
+                            <div class="plan-phase-range">Days 31–60</div>
+                        </div>
+                        <h3 class="plan-phase-title">Scale Winners & Expand Channels</h3>
+                        <ul class="plan-list">
+                            <li>Double down on top-performing Meta ad sets — scale spend on proven creative while maintaining ROAS targets</li>
+                            <li>Launch TikTok test campaigns: UGC-style creative, product demos, and customer testimonial formats</li>
+                            <li>Stand up the creative production pipeline — weekly output cadence with structured testing cycles</li>
+                            <li>Begin influencer outreach to 20-30 family/tech review creators, negotiate initial partnership terms</li>
+                            <li>Refine landing pages based on channel-specific conversion data — separate pages per traffic source if needed</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-phase">
+                        <div class="plan-phase-header">
+                            <div class="plan-phase-number">03</div>
+                            <div class="plan-phase-range">Days 61–90</div>
+                        </div>
+                        <h3 class="plan-phase-title">Optimize Toward $100K MRR Target</h3>
+                        <ul class="plan-list">
+                            <li>Kill underperformers decisively — reallocate budget from low-ROAS channels to proven winners</li>
+                            <li>Scale proven channels aggressively toward the $100K MRR target, monitoring for diminishing returns</li>
+                            <li>Launch first influencer campaigns and measure initial CAC against paid channel benchmarks</li>
+                            <li>Build a data-driven scaling plan for months 4-6 with updated unit economics from real campaign data</li>
+                            <li>Present comprehensive performance review: what worked, what didn't, and the path to scaling further</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-block">
+                    <h3>Let's discuss how I'd execute this.</h3>
+                    <p>This model is a starting point — I'd love to walk through the thinking, adjust the assumptions with your actual data, and map out the first 30 days in detail.</p>
+                    <a href="mailto:nick.hertzman@gmail.com" class="btn btn-cta">Start the Conversation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>Built by Nick Hertzman &middot; February 2026 &middot; <a href="index.html">Back to Portfolio</a></p>
+        </footer>
+
+    </div>
+
+    <script src="community-phone.js"></script>
+</body>
+</html>

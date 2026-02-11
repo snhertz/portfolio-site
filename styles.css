@@ -584,7 +584,7 @@ body::before {
 .timeline-item {
     position: relative;
     margin-bottom: 80px;
-    width: 48%;
+    width: 50%;
     animation: fadeInUp 0.8s ease-out both;
 }
 
@@ -603,7 +603,7 @@ body::before {
 }
 
 .timeline-item.right {
-    left: 52%;
+    left: 50%;
     text-align: left;
     padding-left: 50px;
 }
@@ -618,6 +618,7 @@ body::before {
     border-radius: 50%;
     background: var(--green-primary);
     border: 3px solid var(--dark-bg);
+    box-sizing: border-box;
     box-shadow: 0 0 0 4px var(--green-glow);
     z-index: 1;
     transition: all var(--transition-base);
@@ -786,6 +787,31 @@ body::before {
    RESPONSIVE DESIGN
    =================================== */
 
+/* Timeline stacks to single column early */
+@media (max-width: 1399px) {
+    .timeline-line {
+        left: 7px;
+        transform: none;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 36px !important;
+        padding-right: 0 !important;
+    }
+
+    .timeline-item::after {
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .timeline-logo-header {
+        flex-direction: row !important;
+    }
+}
+
 @media (max-width: 991px) {
     :root {
         --sidebar-width: 340px;
@@ -805,10 +831,6 @@ body::before {
 }
 
 @media (max-width: 767px) {
-    .fixed-header {
-        height: 3px;
-    }
-
     .page-container {
         flex-direction: column;
         padding-top: 3px;
@@ -859,26 +881,7 @@ body::before {
         font-size: 28px;
     }
 
-    /* Stack timeline on mobile */
-    .timeline-line {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        left: 0 !important;
-        text-align: left !important;
-        padding-left: 50px !important;
-        padding-right: 0 !important;
-    }
-
-    .timeline-item::after {
-        left: 13px !important;
-        right: auto !important;
-    }
-
     .timeline-logo-header {
-        flex-direction: row !important;
         padding: 20px 20px;
     }
 
