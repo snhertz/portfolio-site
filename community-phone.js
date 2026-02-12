@@ -89,50 +89,50 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             initiative: 'Launch Meta Ads for Family/Senior Targeting',
             desc: 'Carousel + video creative on Facebook & Instagram targeting key demos',
-            rationale: 'Impact 9: Meta has the largest addressable audience in CP\'s core demo (families, 35-65). Confidence 8: well-understood platform with deep targeting options and reliable benchmarks. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
-            impact: 9, confidence: 8, ease: 8
+            rationale: 'Impact 9: Meta has the largest addressable audience in CP\'s core demo (families, 35-65). Confidence 7: proven platform with deep targeting options, but uncertain how well CP\'s specific offer will convert without testing. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
+            impact: 9, confidence: 7, ease: 8
         },
         {
             initiative: 'YouTube Pre-Roll / Connected TV',
             desc: 'Video ads on YouTube and CTV platforms targeting family and senior households',
-            rationale: 'Impact 6: CTV is an awareness channel, not a direct response driver. Weak standalone unit economics, but valuable as the top of a multi-channel funnel that feeds direct mail and retargeting. Confidence 6: attribution is murkier for awareness plays, harder to measure true incremental lift. Ease 8: programmatic buying makes launch straightforward, creative can be repurposed from Meta.',
-            impact: 6, confidence: 6, ease: 8
+            rationale: 'Impact 6: CTV is an awareness channel, not a direct response driver. Weak standalone unit economics, but valuable as the top of a multi-channel funnel that feeds direct mail and retargeting. Confidence 5: attribution is murkier for awareness plays, harder to measure true incremental lift - about 50/50 on whether this drives measurable impact. Ease 8: programmatic buying makes launch straightforward, creative can be repurposed from Meta.',
+            impact: 6, confidence: 5, ease: 8
         },
         {
             initiative: 'Creative Testing System',
             desc: 'Structured hypothesis, produce, test, iterate framework across all channels',
-            rationale: 'Impact 9: creative is the primary lever when you\'re building a new channel. A system for producing and testing at volume compounds everything else. Confidence 9: this is a process, not a bet. Ease 7: requires setup (naming conventions, thresholds, kill criteria) but no media spend.',
-            impact: 9, confidence: 9, ease: 7
+            rationale: 'Impact 9: creative is the primary lever when you\'re building a new channel. A system for producing and testing at volume compounds everything else. Confidence 8: this is a process that improves odds significantly, though not a guarantee of hitting $100K ARR target. Ease 7: requires setup (naming conventions, thresholds, kill criteria) but no media spend.',
+            impact: 9, confidence: 8, ease: 7
         },
         {
             initiative: 'Landing Page Optimization for Non-Google Traffic',
             desc: 'Dedicated LPs per channel with tailored messaging and social proof',
-            rationale: 'Impact 8: sending paid traffic to a generic page kills conversion. Channel-specific LPs can 2-3x CVR. Confidence 8: LP optimization is well-proven and measurable within days. Ease 8: fast to spin up with a page builder, low resource cost.',
-            impact: 8, confidence: 8, ease: 8
+            rationale: 'Impact 8: sending paid traffic to a generic page kills conversion. Channel-specific LPs can 2-3x CVR. Confidence 7: LP optimization is well-proven, though exact lift varies by offer and creative quality. Ease 8: fast to spin up with a page builder, low resource cost.',
+            impact: 8, confidence: 7, ease: 8
         },
         {
             initiative: 'Direct Mail Retargeting',
             desc: 'Physical mailers to high-intent website visitors and abandoned signups',
-            rationale: 'Impact 6: narrow audience (retargeting only) caps the volume ceiling, but high intent means strong per-piece conversion. Confidence 6: less common channel with fewer benchmarks, though the audience is pre-qualified. Ease 7: vendors handle fulfillment, mainly requires pixel integration and creative.',
-            impact: 6, confidence: 6, ease: 7
+            rationale: 'Impact 6: narrow audience (retargeting only) caps the volume ceiling, but high intent means strong per-piece conversion. Confidence 5: less common channel with fewer benchmarks - about 50% certain this delivers meaningful impact given untested audience. Ease 7: vendors handle fulfillment, mainly requires pixel integration and creative.',
+            impact: 6, confidence: 5, ease: 7
         },
         {
             initiative: 'Affiliate / Referral Channel Buildout',
             desc: 'Commission-based program for existing customers and partners',
-            rationale: 'Impact 6: scalable long-term but slow to build initial volume, unlikely to move the needle in the first 6 months. Confidence 7: performance-based model means low risk, and existing customers are a warm starting point. Ease 5: requires building program infrastructure, tracking, commission structure, and ongoing partner recruitment.',
-            impact: 6, confidence: 7, ease: 5
+            rationale: 'Impact 6: scalable long-term but slow to build initial volume, unlikely to move the needle in the first 6 months. Confidence 6: performance-based model means low risk, and existing customers are a warm starting point, but execution complexity creates uncertainty. Ease 5: requires building program infrastructure, tracking, commission structure, and ongoing partner recruitment.',
+            impact: 6, confidence: 6, ease: 5
         },
         {
             initiative: 'Influencer Partnerships',
             desc: 'Family and tech YouTube/Instagram reviewers with trackable promo codes',
-            rationale: 'Impact 7: authentic endorsements convert well for trust-dependent products like home phone service. Confidence 7: trackable via promo codes, performance is measurable quickly. Ease 6: requires outreach and content coordination, but platforms like Creator Marketplace streamline the process.',
-            impact: 7, confidence: 7, ease: 6
+            rationale: 'Impact 7: authentic endorsements convert well for trust-dependent products like home phone service. Confidence 6: trackable via promo codes and measurable quickly, but influencer performance varies widely - moderate confidence in consistent impact. Ease 6: requires outreach and content coordination, but platforms like Creator Marketplace streamline the process.',
+            impact: 7, confidence: 6, ease: 6
         },
         {
             initiative: 'TikTok Creative Testing Program',
             desc: 'UGC-style and product demo ads on TikTok',
-            rationale: 'Impact 5: TikTok\'s core demo skews younger than CP\'s target audience (families, seniors). Potential upside if creative resonates, but not the primary channel. Confidence 5: limited data on TikTok performance for this product category and age group. Ease 7: low CPMs and easy to launch, good for low-cost experimentation.',
-            impact: 5, confidence: 5, ease: 7
+            rationale: 'Impact 5: TikTok\'s core demo skews younger than CP\'s target audience (families, seniors). Potential upside if creative resonates, but not the primary channel. Confidence 4: limited data on TikTok performance for this product category and age group - below 50% certainty. Ease 7: low CPMs and easy to launch, good for low-cost experimentation.',
+            impact: 5, confidence: 4, ease: 7
         }
     ];
 
