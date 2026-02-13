@@ -247,7 +247,15 @@
                             <span class="toggle-track"><span class="toggle-thumb"></span></span>
                         </label>
                         <span class="channel-tab-dot youtube"></span>
-                        <span class="channel-tab-label">YouTube / CTV</span>
+                        <span class="channel-tab-label">YouTube Ads</span>
+                    </div>
+                    <div class="channel-tab disabled" data-channel="ctv">
+                        <label class="channel-toggle" title="Include this channel in the model">
+                            <input type="checkbox" class="channel-enabled" data-channel="ctv">
+                            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                        </label>
+                        <span class="channel-tab-dot ctv"></span>
+                        <span class="channel-tab-label">CTV / OTT</span>
                     </div>
                 </div>
 
@@ -433,29 +441,29 @@
                     <!-- YouTube Panel -->
                     <div class="channel-panel" id="panel-youtube">
                         <div class="panel-header youtube">
-                            <h3>YouTube / CTV</h3>
-                            <p>Pre-roll ads and connected TV placements for broad reach awareness</p>
+                            <h3>YouTube Ads</h3>
+                            <p>Performance-driven pre-roll and in-stream ads targeting users with high intent</p>
                         </div>
                         <div class="input-grid">
                             <div class="input-group">
                                 <label>Weekly Starting Spend</label>
                                 <div class="slider-group">
-                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="weeklySpend" min="1000" max="100000" step="1000" value="5000">
-                                    <span class="slider-value">$5,000</span>
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="weeklySpend" min="1000" max="100000" step="1000" value="8000">
+                                    <span class="slider-value">$8,000</span>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <label>CPM <span class="benchmark">Benchmark: $15-35</span></label>
+                                <label>CPM <span class="benchmark">Benchmark: $3.50-8</span></label>
                                 <div class="slider-group">
-                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="cpm" min="3" max="50" step="0.5" value="30">
-                                    <span class="slider-value">$30.00</span>
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="cpm" min="2" max="20" step="0.5" value="6">
+                                    <span class="slider-value">$6.00</span>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <label>CTR <span class="benchmark">Benchmark: 0.3-0.8%</span></label>
+                                <label>CTR <span class="benchmark">Benchmark: 0.5-0.7%</span></label>
                                 <div class="slider-group">
-                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="ctr" min="0.1" max="5" step="0.1" value="0.4">
-                                    <span class="slider-value">0.4%</span>
+                                    <input type="range" class="channel-input" data-channel="youtube" data-metric="ctr" min="0.1" max="3" step="0.05" value="0.5">
+                                    <span class="slider-value">0.50%</span>
                                 </div>
                             </div>
                             <div class="input-group">
@@ -483,6 +491,65 @@
                                 <label>Avg Monthly Revenue / Customer</label>
                                 <div class="slider-group">
                                     <input type="range" class="channel-input" data-channel="youtube" data-metric="avgRevenue" min="10" max="150" step="1" value="70">
+                                    <span class="slider-value">$70</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTV Panel -->
+                    <div class="channel-panel" id="panel-ctv">
+                        <div class="panel-header ctv">
+                            <h3>CTV / OTT</h3>
+                            <p>Premium connected TV inventory for brand awareness and reach — optimized for impressions and view-through lift, not direct clicks</p>
+                        </div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Weekly Starting Spend</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="ctv" data-metric="weeklySpend" min="1000" max="100000" step="1000" value="15000">
+                                    <span class="slider-value">$15,000</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CPM <span class="benchmark">Benchmark: $25-65</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="ctv" data-metric="cpm" min="15" max="80" step="1" value="40">
+                                    <span class="slider-value">$40.00</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>CTR <span class="benchmark">Note: CTV optimizes for reach/frequency, not clicks</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="ctv" data-metric="ctr" min="0.01" max="0.5" step="0.01" value="0.05">
+                                    <span class="slider-value">0.05%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Landing Page CVR <span class="benchmark">Benchmark: 3-6%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="ctv" data-metric="lpCvr" min="1" max="25" step="0.5" value="3">
+                                    <span class="slider-value">3.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Trial-to-Paid CVR <span class="benchmark">Benchmark: 6-12%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="ctv" data-metric="trialCvr" min="1" max="40" step="1" value="8">
+                                    <span class="slider-value">8%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Monthly Churn Rate <span class="benchmark">Benchmark: 4-8%</span></label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="ctv" data-metric="churn" min="1" max="15" step="0.5" value="6">
+                                    <span class="slider-value">6.0%</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Avg Monthly Revenue / Customer</label>
+                                <div class="slider-group">
+                                    <input type="range" class="channel-input" data-channel="ctv" data-metric="avgRevenue" min="10" max="150" step="1" value="70">
                                     <span class="slider-value">$70</span>
                                 </div>
                             </div>
@@ -680,8 +747,9 @@
                             <li>Scale top-performing Meta ad sets, increasing spend on proven creative while watching for diminishing returns</li>
                             <li>Stand up the creative production pipeline with a weekly output cadence and structured testing cycles</li>
                             <li>Begin influencer outreach to 20-30 family/tech review creators, negotiate initial partnership terms and set up tracking</li>
-                            <li>Launch YouTube/CTV test campaigns as an awareness layer to support the direct response funnel</li>
+                            <li>Launch YouTube test campaigns targeting high-intent keywords and audiences, measuring direct CAC/LTV performance</li>
                             <li>Refine landing pages based on Meta data, build separate pages for influencer and YouTube traffic</li>
+                            <li>Optionally test CTV/OTT as a top-of-funnel awareness play if early channels validate unit economics</li>
                         </ul>
                     </div>
 
@@ -692,10 +760,10 @@
                         </div>
                         <h3 class="plan-phase-title">Validate Second Channels, Plan the Scale</h3>
                         <ul class="plan-list">
-                            <li>Measure initial influencer and YouTube/CTV results against Meta's proven CAC benchmarks</li>
+                            <li>Measure initial influencer and YouTube results against Meta's proven CAC benchmarks</li>
                             <li>Kill underperformers decisively, reallocate budget to whatever is working</li>
                             <li>Check lead quality across all channels against actual downstream conversion, not just top-of-funnel volume</li>
-                            <li>Test whether YouTube/CTV awareness spend improves Meta and direct mail conversion rates (multi-channel lift)</li>
+                            <li>If CTV is running, test whether awareness spend improves Meta and direct mail conversion rates (multi-channel lift)</li>
                             <li>Build a data-driven scaling plan for months 4-6 with real unit economics, targeting $100K net-new ARR by month 6</li>
                         </ul>
                     </div>

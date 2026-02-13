@@ -42,6 +42,7 @@
     --tiktok-color: #fe2c55;
     --influencer-color: #E1306C;
     --youtube-color: #FF0000;
+    --ctv-color: #9333EA;
 }
 
 /* ===================================
@@ -935,6 +936,7 @@ body::before {
 .channel-tab-dot.tiktok { background: var(--tiktok-color); }
 .channel-tab-dot.influencer { background: var(--influencer-color); }
 .channel-tab-dot.youtube { background: var(--youtube-color); }
+.channel-tab-dot.ctv { background: var(--ctv-color); }
 
 /* Channel Panels */
 .channel-panels {
@@ -972,6 +974,7 @@ body::before {
 .panel-header.tiktok::before { background: var(--tiktok-color); }
 .panel-header.influencer::before { background: var(--influencer-color); }
 .panel-header.youtube::before { background: var(--youtube-color); }
+.panel-header.ctv::before { background: var(--ctv-color); }
 
 .panel-header h3 {
     font-family: var(--font-display);

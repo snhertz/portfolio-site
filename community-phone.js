@@ -43,13 +43,24 @@ document.addEventListener('DOMContentLoaded', function () {
             avgRevenue: 70
         },
         youtube: {
-            name: 'YouTube / CTV',
+            name: 'YouTube Ads',
             color: '#FF0000',
-            weeklySpend: 5000,
-            cpm: 30,
-            ctr: 0.4,
+            weeklySpend: 8000,
+            cpm: 6,
+            ctr: 0.5,
             lpCvr: 4,
             trialCvr: 9,
+            churn: 6,
+            avgRevenue: 70
+        },
+        ctv: {
+            name: 'CTV / OTT',
+            color: '#9333EA',
+            weeklySpend: 15000,
+            cpm: 40,
+            ctr: 0.05,
+            lpCvr: 3,
+            trialCvr: 8,
             churn: 6,
             avgRevenue: 70
         }
@@ -59,10 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
         conservative: {
             globalGrowth: 2,
             channels: {
-                meta:       { weeklySpend: 8000,  cpm: 16, ctr: 0.7,  lpCvr: 3.5, trialCvr: 10, churn: 8,  avgRevenue: 70 },
-                tiktok:     { weeklySpend: 5000,  cpm: 12, ctr: 0.4,  lpCvr: 2.5, trialCvr: 6,  churn: 9,  avgRevenue: 70 },
-                influencer: { weeklySpend: 3000,  cpm: 20, ctr: 1.5,  lpCvr: 7,   trialCvr: 12, churn: 6,  avgRevenue: 70 },
-                youtube:    { weeklySpend: 3000,  cpm: 35, ctr: 0.3,  lpCvr: 3,   trialCvr: 7,  churn: 7,  avgRevenue: 70 }
+                meta:       { weeklySpend: 8000,  cpm: 16,  ctr: 0.7,  lpCvr: 3.5, trialCvr: 10, churn: 8,  avgRevenue: 70 },
+                tiktok:     { weeklySpend: 5000,  cpm: 12,  ctr: 0.4,  lpCvr: 2.5, trialCvr: 6,  churn: 9,  avgRevenue: 70 },
+                influencer: { weeklySpend: 3000,  cpm: 20,  ctr: 1.5,  lpCvr: 7,   trialCvr: 12, churn: 6,  avgRevenue: 70 },
+                youtube:    { weeklySpend: 5000,  cpm: 7,   ctr: 0.45, lpCvr: 3,   trialCvr: 7,  churn: 7,  avgRevenue: 70 },
+                ctv:        { weeklySpend: 10000, cpm: 50,  ctr: 0.03, lpCvr: 2.5, trialCvr: 6,  churn: 7,  avgRevenue: 70 }
             }
         },
         base: {
@@ -71,16 +83,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 meta:       { weeklySpend: 12000, cpm: 14, ctr: 0.9,  lpCvr: 5,  trialCvr: 12, churn: 7, avgRevenue: 70 },
                 tiktok:     { weeklySpend: 8000,  cpm: 10, ctr: 0.5,  lpCvr: 3,  trialCvr: 8,  churn: 7, avgRevenue: 70 },
                 influencer: { weeklySpend: 5000,  cpm: 18, ctr: 1.8,  lpCvr: 9,  trialCvr: 16, churn: 5, avgRevenue: 70 },
-                youtube:    { weeklySpend: 5000,  cpm: 30, ctr: 0.4,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 70 }
+                youtube:    { weeklySpend: 8000,  cpm: 6,  ctr: 0.5,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 70 },
+                ctv:        { weeklySpend: 15000, cpm: 40, ctr: 0.05, lpCvr: 3,  trialCvr: 8,  churn: 6, avgRevenue: 70 }
             }
         },
         aggressive: {
             globalGrowth: 7,
             channels: {
-                meta:       { weeklySpend: 18000, cpm: 12, ctr: 1.2,  lpCvr: 8,  trialCvr: 15, churn: 5, avgRevenue: 70 },
-                tiktok:     { weeklySpend: 12000, cpm: 8,  ctr: 0.8,  lpCvr: 5,  trialCvr: 10, churn: 6, avgRevenue: 70 },
-                influencer: { weeklySpend: 8000,  cpm: 15, ctr: 2.5,  lpCvr: 12, trialCvr: 20, churn: 4, avgRevenue: 70 },
-                youtube:    { weeklySpend: 8000,  cpm: 25, ctr: 0.5,  lpCvr: 6,  trialCvr: 12, churn: 5, avgRevenue: 70 }
+                meta:       { weeklySpend: 18000, cpm: 12, ctr: 1.2,  lpCvr: 8,   trialCvr: 15, churn: 5, avgRevenue: 70 },
+                tiktok:     { weeklySpend: 12000, cpm: 8,  ctr: 0.8,  lpCvr: 5,   trialCvr: 10, churn: 6, avgRevenue: 70 },
+                influencer: { weeklySpend: 8000,  cpm: 15, ctr: 2.5,  lpCvr: 12,  trialCvr: 20, churn: 4, avgRevenue: 70 },
+                youtube:    { weeklySpend: 12000, cpm: 4,  ctr: 0.65, lpCvr: 6,   trialCvr: 12, churn: 5, avgRevenue: 70 },
+                ctv:        { weeklySpend: 20000, cpm: 30, ctr: 0.08, lpCvr: 4.5, trialCvr: 10, churn: 5, avgRevenue: 70 }
             }
         }
     };
@@ -93,10 +107,16 @@ document.addEventListener('DOMContentLoaded', function () {
             impact: 9, confidence: 7, ease: 8
         },
         {
-            initiative: 'YouTube Pre-Roll / Connected TV',
-            desc: 'Video ads on YouTube and CTV platforms targeting family and senior households',
-            rationale: 'Impact 6: CTV is an awareness channel, not a direct response driver. Weak standalone unit economics, but valuable as the top of a multi-channel funnel that feeds direct mail and retargeting. Confidence 5: attribution is murkier for awareness plays, harder to measure true incremental lift - about 50/50 on whether this drives measurable impact. Ease 8: programmatic buying makes launch straightforward, creative can be repurposed from Meta.',
-            impact: 6, confidence: 5, ease: 8
+            initiative: 'YouTube Ads (Performance)',
+            desc: 'Pre-roll and in-stream video ads on YouTube targeting high-intent keywords and audiences',
+            rationale: 'Impact 7: YouTube has strong audience reach in CP\'s demo with lower CPMs than Meta. Good for mid-funnel testing. Confidence 6: proven performance channel with clear attribution, though conversion depends heavily on creative quality - moderate confidence. Ease 8: fast to launch via Google Ads, can leverage existing search keyword data and creative from other channels.',
+            impact: 7, confidence: 6, ease: 8
+        },
+        {
+            initiative: 'Connected TV / OTT (Awareness)',
+            desc: 'Premium CTV inventory on streaming platforms for reach and brand awareness',
+            rationale: 'Impact 5: CTV is an awareness channel, not a direct response driver. Weak standalone unit economics, but valuable as the top of a multi-channel funnel that feeds retargeting and direct mail later. Confidence 4: attribution is murky for awareness plays - difficult to measure true incremental lift, below 50% certainty this drives measurable impact in first 6 months. Ease 7: programmatic buying makes launch straightforward, but requires creative production and measurement infrastructure.',
+            impact: 5, confidence: 4, ease: 7
         },
         {
             initiative: 'Creative Testing System',
@@ -145,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
         channelConfigs[key] = { ...CHANNEL_DEFAULTS[key] };
     });
 
-    let channelEnabled = { meta: true, tiktok: false, influencer: false, youtube: true };
+    let channelEnabled = { meta: true, tiktok: false, influencer: false, youtube: true, ctv: false };
     let globalBudget = 75000;
     let globalHorizon = 26;
     let globalGrowth = 3;
