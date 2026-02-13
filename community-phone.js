@@ -427,21 +427,23 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!tbody) return;
         tbody.innerHTML = '';
 
-        var totals = { impressions: 0, clicks: 0, leads: 0, customers: 0 };
+        var totals = { spend: 0, impressions: 0, clicks: 0, leads: 0, customers: 0 };
 
         Object.entries(allProjections).forEach(function (entry) {
             var key = entry[0];
             var proj = entry[1];
             var config = channelConfigs[key];
 
-            var impressions = 0, clicks = 0, leads = 0, customers = 0;
+            var spend = 0, impressions = 0, clicks = 0, leads = 0, customers = 0;
             proj.forEach(function (week) {
+                spend += week.weeklySpend;
                 impressions += week.impressions;
                 clicks += week.clicks;
                 leads += week.leads;
                 customers += week.newCustomers;
             });
 
+            totals.spend += spend;
             totals.impressions += impressions;
             totals.clicks += clicks;
             totals.leads += leads;
@@ -454,6 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var tr = document.createElement('tr');
             tr.innerHTML =
                 '<td><span class="channel-name"><span class="channel-dot" style="background:' + config.color + '"></span>' + config.name + '</span></td>' +
+                '<td>$' + formatNumber(spend) + '</td>' +
                 '<td>' + formatNumber(impressions) + '</td>' +
                 '<td class="funnel-arrow"><span class="funnel-rate">' + ctr + '</span></td>' +
                 '<td>' + formatNumber(clicks) + '</td>' +
@@ -473,6 +476,7 @@ document.addEventListener('DOMContentLoaded', function () {
         totalTr.className = 'funnel-total-row';
         totalTr.innerHTML =
             '<td><span class="channel-name"><span class="channel-dot" style="background:var(--green-primary)"></span>Total</span></td>' +
+            '<td>$' + formatNumber(totals.spend) + '</td>' +
             '<td>' + formatNumber(totals.impressions) + '</td>' +
             '<td class="funnel-arrow"><span class="funnel-rate">' + totalCtr + '</span></td>' +
             '<td>' + formatNumber(totals.clicks) + '</td>' +
@@ -759,6 +763,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function updateGlobalBudgetFromChannels() {
+        var totalWeeklySpend = 0;
+        Object.keys(channelConfigs).forEach(function (key) {
+            if (channelEnabled[key]) {
+                totalWeeklySpend += channelConfigs[key].weeklySpend;
+            }
+        });
+        var monthlyBudget = Math.round(totalWeeklySpend * 4.33);
+
+        var budgetSlider = document.getElementById('globalBudget');
+        if (budgetSlider) {
+            budgetSlider.value = monthlyBudget;
+            document.getElementById('globalBudgetValue').textContent = '$' + monthlyBudget.toLocaleString();
+        }
+        globalBudget = monthlyBudget;
+    }
+
     function initSliders() {
         // Channel sliders
         document.querySelectorAll('.channel-input').forEach(input => {
@@ -769,6 +790,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const val = parseFloat(this.value);
                 channelConfigs[channel][metric] = val;
                 this.parentElement.querySelector('.slider-value').textContent = formatSliderValue(metric, val);
+
+                // Update global budget if weekly spend changed
+                if (metric === 'weeklySpend') {
+                    updateGlobalBudgetFromChannels();
+                }
 
                 // Remove active scenario
                 document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
@@ -858,6 +884,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     tab.classList.add('disabled');
                 }
+                updateGlobalBudgetFromChannels();
                 recalculate();
             });
         });
