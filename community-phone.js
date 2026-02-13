@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
         meta: {
             name: 'Meta Ads',
             color: '#1877F2',
-            weeklySpend: 4000,
+            weeklySpend: 5775,
             cpm: 14,
-            ctr: 0.9,
+            ctr: 1.3,
             lpCvr: 5,
             trialCvr: 12,
             churn: 7,
@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         base: {
-            globalGrowth: 3,
+            globalGrowth: 5,
             channels: {
-                meta:       { weeklySpend: 4000,  cpm: 14, ctr: 0.9,  lpCvr: 5,  trialCvr: 12, churn: 7, avgRevenue: 70 },
+                meta:       { weeklySpend: 5775,  cpm: 14, ctr: 1.3,  lpCvr: 5,  trialCvr: 12, churn: 7, avgRevenue: 70 },
                 tiktok:     { weeklySpend: 1500,  cpm: 10, ctr: 0.5,  lpCvr: 3,  trialCvr: 8,  churn: 7, avgRevenue: 70 },
                 influencer: { weeklySpend: 1000,  cpm: 18, ctr: 1.8,  lpCvr: 9,  trialCvr: 16, churn: 5, avgRevenue: 70 },
                 youtube:    { weeklySpend: 2250,  cpm: 6,  ctr: 0.5,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 70 },
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
         channelConfigs[key] = { ...CHANNEL_DEFAULTS[key] };
     });
 
-    let channelEnabled = { meta: true, tiktok: false, influencer: false, youtube: true, ctv: false };
+    let channelEnabled = { meta: true, tiktok: false, influencer: false, youtube: false, ctv: false };
     let globalBudget = 75000;
     let globalHorizon = 26;
     let globalGrowth = 3;
