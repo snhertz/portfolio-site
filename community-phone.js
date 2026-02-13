@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         meta: {
             name: 'Meta Ads',
             color: '#1877F2',
-            weeklySpend: 8000,
+            weeklySpend: 4000,
             cpm: 14,
             ctr: 0.9,
             lpCvr: 5,
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tiktok: {
             name: 'TikTok Ads',
             color: '#fe2c55',
-            weeklySpend: 6000,
+            weeklySpend: 3000,
             cpm: 10,
             ctr: 0.5,
             lpCvr: 3,
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         influencer: {
             name: 'Influencer / Affiliate',
             color: '#E1306C',
-            weeklySpend: 3500,
+            weeklySpend: 1750,
             cpm: 18,
             ctr: 1.8,
             lpCvr: 9,
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         youtube: {
             name: 'YouTube Ads',
             color: '#FF0000',
-            weeklySpend: 4500,
+            weeklySpend: 2250,
             cpm: 6,
             ctr: 0.5,
             lpCvr: 4,
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ctv: {
             name: 'CTV / OTT',
             color: '#9333EA',
-            weeklySpend: 5000,
+            weeklySpend: 2500,
             cpm: 40,
             ctr: 0.05,
             lpCvr: 3,
@@ -70,31 +70,31 @@ document.addEventListener('DOMContentLoaded', function () {
         conservative: {
             globalGrowth: 2,
             channels: {
-                meta:       { weeklySpend: 5000,  cpm: 16,  ctr: 0.7,  lpCvr: 3.5, trialCvr: 10, churn: 8,  avgRevenue: 70 },
-                tiktok:     { weeklySpend: 2000,  cpm: 12,  ctr: 0.4,  lpCvr: 2.5, trialCvr: 6,  churn: 9,  avgRevenue: 70 },
-                influencer: { weeklySpend: 1500,  cpm: 20,  ctr: 1.5,  lpCvr: 7,   trialCvr: 12, churn: 6,  avgRevenue: 70 },
-                youtube:    { weeklySpend: 3000,  cpm: 7,   ctr: 0.45, lpCvr: 3,   trialCvr: 7,  churn: 7,  avgRevenue: 70 },
-                ctv:        { weeklySpend: 3000,  cpm: 50,  ctr: 0.03, lpCvr: 2.5, trialCvr: 6,  churn: 7,  avgRevenue: 70 }
+                meta:       { weeklySpend: 2500,  cpm: 16,  ctr: 0.7,  lpCvr: 3.5, trialCvr: 10, churn: 8,  avgRevenue: 70 },
+                tiktok:     { weeklySpend: 1000,  cpm: 12,  ctr: 0.4,  lpCvr: 2.5, trialCvr: 6,  churn: 9,  avgRevenue: 70 },
+                influencer: { weeklySpend: 750,   cpm: 20,  ctr: 1.5,  lpCvr: 7,   trialCvr: 12, churn: 6,  avgRevenue: 70 },
+                youtube:    { weeklySpend: 1500,  cpm: 7,   ctr: 0.45, lpCvr: 3,   trialCvr: 7,  churn: 7,  avgRevenue: 70 },
+                ctv:        { weeklySpend: 1500,  cpm: 50,  ctr: 0.03, lpCvr: 2.5, trialCvr: 6,  churn: 7,  avgRevenue: 70 }
             }
         },
         base: {
             globalGrowth: 3,
             channels: {
-                meta:       { weeklySpend: 8000,  cpm: 14, ctr: 0.9,  lpCvr: 5,  trialCvr: 12, churn: 7, avgRevenue: 70 },
-                tiktok:     { weeklySpend: 3000,  cpm: 10, ctr: 0.5,  lpCvr: 3,  trialCvr: 8,  churn: 7, avgRevenue: 70 },
-                influencer: { weeklySpend: 2000,  cpm: 18, ctr: 1.8,  lpCvr: 9,  trialCvr: 16, churn: 5, avgRevenue: 70 },
-                youtube:    { weeklySpend: 4500,  cpm: 6,  ctr: 0.5,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 70 },
-                ctv:        { weeklySpend: 5000,  cpm: 40, ctr: 0.05, lpCvr: 3,  trialCvr: 8,  churn: 6, avgRevenue: 70 }
+                meta:       { weeklySpend: 4000,  cpm: 14, ctr: 0.9,  lpCvr: 5,  trialCvr: 12, churn: 7, avgRevenue: 70 },
+                tiktok:     { weeklySpend: 1500,  cpm: 10, ctr: 0.5,  lpCvr: 3,  trialCvr: 8,  churn: 7, avgRevenue: 70 },
+                influencer: { weeklySpend: 1000,  cpm: 18, ctr: 1.8,  lpCvr: 9,  trialCvr: 16, churn: 5, avgRevenue: 70 },
+                youtube:    { weeklySpend: 2250,  cpm: 6,  ctr: 0.5,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 70 },
+                ctv:        { weeklySpend: 2500,  cpm: 40, ctr: 0.05, lpCvr: 3,  trialCvr: 8,  churn: 6, avgRevenue: 70 }
             }
         },
         aggressive: {
             globalGrowth: 7,
             channels: {
-                meta:       { weeklySpend: 11000, cpm: 12, ctr: 1.2,  lpCvr: 8,   trialCvr: 15, churn: 5, avgRevenue: 70 },
-                tiktok:     { weeklySpend: 4500,  cpm: 8,  ctr: 0.8,  lpCvr: 5,   trialCvr: 10, churn: 6, avgRevenue: 70 },
-                influencer: { weeklySpend: 3000,  cpm: 15, ctr: 2.5,  lpCvr: 12,  trialCvr: 20, churn: 4, avgRevenue: 70 },
-                youtube:    { weeklySpend: 6000,  cpm: 4,  ctr: 0.65, lpCvr: 6,   trialCvr: 12, churn: 5, avgRevenue: 70 },
-                ctv:        { weeklySpend: 7000,  cpm: 30, ctr: 0.08, lpCvr: 4.5, trialCvr: 10, churn: 5, avgRevenue: 70 }
+                meta:       { weeklySpend: 5500,  cpm: 12, ctr: 1.2,  lpCvr: 8,   trialCvr: 15, churn: 5, avgRevenue: 70 },
+                tiktok:     { weeklySpend: 2250,  cpm: 8,  ctr: 0.8,  lpCvr: 5,   trialCvr: 10, churn: 6, avgRevenue: 70 },
+                influencer: { weeklySpend: 1500,  cpm: 15, ctr: 2.5,  lpCvr: 12,  trialCvr: 20, churn: 4, avgRevenue: 70 },
+                youtube:    { weeklySpend: 3000,  cpm: 4,  ctr: 0.65, lpCvr: 6,   trialCvr: 12, churn: 5, avgRevenue: 70 },
+                ctv:        { weeklySpend: 3500,  cpm: 30, ctr: 0.08, lpCvr: 4.5, trialCvr: 10, churn: 5, avgRevenue: 70 }
             }
         }
     };
