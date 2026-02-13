@@ -166,15 +166,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     let channelEnabled = { meta: true, tiktok: false, influencer: false, youtube: false, ctv: false };
-    let globalBudget = 75000;
+    let globalBudget = 25000;
     let globalHorizon = 26;
-    let globalGrowth = 3;
+    let globalGrowth = 5;
+    let globalSpendCap = 50000;
 
     // ===================================
     // CALCULATOR ENGINE
     // ===================================
 
-    function channelModel(config, weeks, growthRate) {
+    function channelModel(config, weeks, growthRate, spendCap) {
         const projections = [];
         let activeCustomers = 0;
         let cumulativeMRR = 0;
@@ -183,7 +184,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const weeklyChurn = 1 - Math.pow(1 - config.churn / 100, 1 / 4.33);
 
         for (let w = 0; w < weeks; w++) {
-            const weeklySpend = config.weeklySpend * Math.pow(1 + growthRate / 100, w);
+            let weeklySpend = config.weeklySpend * Math.pow(1 + growthRate / 100, w);
+
+            // Apply spend cap if monthly spend would exceed it
+            const monthlySpend = weeklySpend * 4.33;
+            if (spendCap && monthlySpend > spendCap) {
+                weeklySpend = spendCap / 4.33;
+            }
+
             const impressions = (weeklySpend / config.cpm) * 1000;
             const clicks = impressions * (config.ctr / 100);
             const leads = clicks * (config.lpCvr / 100);
@@ -293,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const allProjections = {};
         Object.keys(channelConfigs).forEach(key => {
             if (!channelEnabled[key]) return;
-            allProjections[key] = channelModel(channelConfigs[key], globalHorizon, globalGrowth);
+            allProjections[key] = channelModel(channelConfigs[key], globalHorizon, globalGrowth, globalSpendCap);
         });
 
         const combined = aggregateChannels(allProjections, globalHorizon);
@@ -849,6 +857,16 @@ document.addEventListener('DOMContentLoaded', function () {
             growthSlider.addEventListener('input', function () {
                 globalGrowth = parseFloat(this.value);
                 document.getElementById('globalGrowthValue').textContent = globalGrowth.toFixed(1) + '%';
+                recalculate();
+            });
+        }
+
+        // Global spend cap
+        const spendCapSlider = document.getElementById('globalSpendCap');
+        if (spendCapSlider) {
+            spendCapSlider.addEventListener('input', function () {
+                globalSpendCap = parseInt(this.value);
+                document.getElementById('globalSpendCapValue').textContent = '$' + globalSpendCap.toLocaleString();
                 recalculate();
             });
         }
