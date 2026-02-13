@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             initiative: 'Launch Meta Ads for Family/Senior Targeting',
             desc: 'Carousel + video creative on Facebook & Instagram targeting key demos',
-            rationale: 'Impact 9: Meta has the largest addressable audience in CP\'s core demo (families, 35-65). Confidence 7: proven platform with deep targeting options, but uncertain how well CP\'s specific offer will convert without testing. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
-            impact: 9, confidence: 7, ease: 8
+            rationale: 'Impact 8: Meta has the largest addressable audience in CP\'s core demo (families, 35-65), and could realistically deliver 70-80% of the $100K goal if executed well. Confidence 7: proven platform with deep targeting options, but uncertain how well CP\'s specific offer will convert without testing. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
+            impact: 8, confidence: 7, ease: 8
         },
         {
             initiative: 'YouTube Ads (Performance)',
@@ -121,26 +121,26 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             initiative: 'Creative Testing System',
             desc: 'Structured hypothesis, produce, test, iterate framework across all channels',
-            rationale: 'Impact 9: creative is the primary lever when you\'re building a new channel. A system for producing and testing at volume compounds everything else. Confidence 8: this is a process that improves odds significantly, though not a guarantee of hitting $100K ARR target. Ease 7: requires setup (naming conventions, thresholds, kill criteria) but no media spend.',
-            impact: 9, confidence: 8, ease: 7
+            rationale: 'Impact 7: creative is a primary lever when building a new channel, and a systematic testing framework compounds the impact of every channel initiative. Can improve performance across all channels by 50-70%, which gets us meaningfully closer to the goal but doesn\'t deliver it alone. Confidence 8: this is a process that improves odds significantly, though not a guarantee of hitting $100K ARR target. Ease 7: requires setup (naming conventions, thresholds, kill criteria) but no media spend.',
+            impact: 7, confidence: 8, ease: 7
         },
         {
             initiative: 'Landing Page Optimization for Non-Google Traffic',
             desc: 'Dedicated LPs per channel with tailored messaging and social proof',
-            rationale: 'Impact 8: sending paid traffic to a generic page kills conversion. Channel-specific LPs can 2-3x CVR. Confidence 7: LP optimization is well-proven, though exact lift varies by offer and creative quality. Ease 8: fast to spin up with a page builder, low resource cost.',
-            impact: 8, confidence: 7, ease: 8
+            rationale: 'Impact 6: sending paid traffic to a generic page kills conversion, and channel-specific LPs can 2-3x CVR. This is a force multiplier on other channels rather than a standalone driver - gets us 50-60% of the way there by improving conversion across all paid efforts. Confidence 7: LP optimization is well-proven, though exact lift varies by offer and creative quality. Ease 8: fast to spin up with a page builder, low resource cost.',
+            impact: 6, confidence: 7, ease: 8
         },
         {
             initiative: 'Direct Mail Retargeting',
             desc: 'Physical mailers to high-intent website visitors and abandoned signups',
-            rationale: 'Impact 6: narrow audience (retargeting only) caps the volume ceiling, but high intent means strong per-piece conversion. Confidence 5: less common channel with fewer benchmarks - about 50% certain this delivers meaningful impact given untested audience. Ease 7: vendors handle fulfillment, mainly requires pixel integration and creative.',
-            impact: 6, confidence: 5, ease: 7
+            rationale: 'Impact 4: narrow audience (retargeting only) caps the volume ceiling. High intent means strong per-piece conversion, but at best this delivers 30-40% of the goal due to audience size constraints. Confidence 5: less common channel with fewer benchmarks - about 50% certain this delivers meaningful impact given untested audience. Ease 7: vendors handle fulfillment, mainly requires pixel integration and creative.',
+            impact: 4, confidence: 5, ease: 7
         },
         {
             initiative: 'Affiliate / Referral Channel Buildout',
             desc: 'Commission-based program for existing customers and partners',
-            rationale: 'Impact 6: scalable long-term but slow to build initial volume, unlikely to move the needle in the first 6 months. Confidence 6: performance-based model means low risk, and existing customers are a warm starting point, but execution complexity creates uncertainty. Ease 5: requires building program infrastructure, tracking, commission structure, and ongoing partner recruitment.',
-            impact: 6, confidence: 6, ease: 5
+            rationale: 'Impact 5: scalable long-term but slow to build initial volume, unlikely to move the needle meaningfully in the first 6 months. At best delivers 40-50% of goal given ramp time. Confidence 6: performance-based model means low risk, and existing customers are a warm starting point, but execution complexity creates uncertainty. Ease 5: requires building program infrastructure, tracking, commission structure, and ongoing partner recruitment.',
+            impact: 5, confidence: 6, ease: 5
         },
         {
             initiative: 'Influencer Partnerships',
