@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             initiative: 'Launch Meta Ads for Family/Senior Targeting',
             desc: 'Carousel + video creative on Facebook & Instagram targeting key demos',
-            rationale: 'Impact 8: Meta has the largest addressable audience in CP\'s core demo (families, 35-65), and could realistically deliver 70-80% of the $100K goal if executed well. Confidence 7: proven platform with deep targeting options, but uncertain how well CP\'s specific offer will convert without testing. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
-            impact: 8, confidence: 7, ease: 8
+            rationale: 'Impact 10: Meta has the largest addressable audience in CP\'s core demo (families, 35-65), and could realistically deliver 100% of the $100K goal if executed well. This is the primary bet. Confidence 7: proven platform with deep targeting options, but uncertain how well CP\'s specific offer will convert without testing. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
+            impact: 10, confidence: 7, ease: 8
         },
         {
             initiative: 'YouTube Ads (Performance)',
