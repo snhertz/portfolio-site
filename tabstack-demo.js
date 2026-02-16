@@ -100,7 +100,7 @@
         return fetch('/api/extract', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ url: 'https://snhertzman.com/portfolio?expand' }),
+            body: JSON.stringify({ url: 'https://snhertzman.com/portfolio' }),
         })
         .then(function (res) {
             if (!res.ok) return res.json().then(function (d) { throw new Error(d.error || 'Extraction failed'); });

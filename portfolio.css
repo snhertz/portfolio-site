@@ -216,7 +216,10 @@ main {
     margin-bottom: 24px;
     overflow: hidden;
     transition: border-color var(--transition-base), box-shadow var(--transition-base);
-    /* Scroll reveal */
+}
+
+/* Scroll reveal — only when JS is active */
+.js .star-card {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color var(--transition-base), box-shadow var(--transition-base);
@@ -348,8 +351,8 @@ main {
     content: 'Collapse';
 }
 
-/* Card Body (expanded content) */
-.star-card-body {
+/* Card Body (expanded content) — hidden only when JS is active */
+.js .star-card-body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -465,7 +468,10 @@ main {
     padding: 24px 16px;
     text-align: center;
     transition: border-color var(--transition-base), transform var(--transition-base);
-    /* Scroll reveal */
+}
+
+/* Scroll reveal — only when JS is active */
+.js .metric-card {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color var(--transition-base);

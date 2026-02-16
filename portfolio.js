@@ -6,18 +6,6 @@
 (function () {
     'use strict';
 
-    // ---- Auto-expand all cards for extraction bots ----
-    if (new URLSearchParams(window.location.search).has('expand')) {
-        document.querySelectorAll('.star-card').forEach(function (card) {
-            card.classList.add('expanded', 'visible');
-            var header = card.querySelector('.star-card-header');
-            if (header) header.setAttribute('aria-expanded', 'true');
-        });
-        document.querySelectorAll('.metric-card').forEach(function (card) {
-            card.classList.add('visible');
-        });
-    }
-
     // ---- Card expand/collapse ----
     document.querySelectorAll('.star-card-header').forEach(function (header) {
         header.addEventListener('click', function () {
