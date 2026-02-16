@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabstack + Claude: Live Candidate Fit Analysis | Nick Hertzman</title>
+    <meta name="description" content="Live demo: Tabstack extracts portfolio content, Claude analyzes candidate fit for Mozilla's Founding GTM Lead role.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="tabstack-demo.css">
+</head>
+<body>
+
+    <!-- Fixed top accent bar -->
+    <div class="fixed-header"></div>
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <header class="hero">
+            <div class="hero-inner">
+                <span class="hero-badge">Live Product Demo</span>
+                <h1 class="hero-title">Tabstack + Claude:<br>Candidate Fit Analysis</h1>
+                <p class="hero-subtitle">This page uses Tabstack's extraction API to pull structured content from my portfolio, then streams it through Claude for real-time candidate&ndash;role fit analysis.</p>
+                <p class="hero-meta">Nick Hertzman &middot; Founding GTM Lead &middot; Mozilla Tabstack</p>
+            </div>
+        </header>
+
+        <!-- ========== PIPELINE ========== -->
+        <section class="pipeline">
+            <div class="pipeline-card" id="step-source">
+                <div class="pipeline-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                </div>
+                <h3 class="pipeline-label">Portfolio Page</h3>
+                <p class="pipeline-desc">snhertzman.com/portfolio</p>
+            </div>
+            <div class="pipeline-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </div>
+            <div class="pipeline-card" id="step-extract">
+                <div class="pipeline-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <h3 class="pipeline-label">Tabstack Extract</h3>
+                <p class="pipeline-desc">Markdown extraction API</p>
+            </div>
+            <div class="pipeline-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </div>
+            <div class="pipeline-card" id="step-analyze">
+                <div class="pipeline-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/>
+                        <path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/>
+                    </svg>
+                </div>
+                <h3 class="pipeline-label">Claude Analysis</h3>
+                <p class="pipeline-desc">Streaming fit evaluation</p>
+            </div>
+        </section>
+
+        <!-- ========== CTA ========== -->
+        <div class="cta-container">
+            <button class="btn-run" id="run-btn">
+                <span class="btn-text">Run Analysis</span>
+                <span class="btn-spinner"></span>
+            </button>
+            <p class="status-text" id="status-text"></p>
+        </div>
+
+        <!-- ========== EXTRACTION PREVIEW ========== -->
+        <section class="extract-preview" id="extract-preview" hidden>
+            <button class="extract-toggle" id="extract-toggle" aria-expanded="false">
+                <span class="extract-toggle-label">Extraction Preview</span>
+                <span class="extract-stats" id="extract-stats"></span>
+                <svg class="extract-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="extract-body" id="extract-body">
+                <pre id="extract-content"></pre>
+            </div>
+        </section>
+
+        <!-- ========== RESULTS ========== -->
+        <section class="results-container" id="results-container" hidden>
+            <h2 class="results-heading">Candidate Fit Analysis</h2>
+            <div class="results-body" id="results-body"></div>
+            <span class="streaming-cursor" id="streaming-cursor"></span>
+        </section>
+
+        <!-- ========== ERROR ========== -->
+        <section class="error-container" id="error-container" hidden>
+            <div class="error-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="15" y1="9" x2="9" y2="15"/>
+                    <line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+            </div>
+            <p class="error-message" id="error-message"></p>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="https://snhertzman.com" class="footer-back">&larr; snhertzman.com</a>
+            <span class="footer-credit">Built with Claude Code</span>
+        </div>
+    </footer>
+
+    <script src="tabstack-demo.js"></script>
+
+</body>
+</html>
