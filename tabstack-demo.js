@@ -2,6 +2,7 @@
     'use strict';
 
     // ---- DOM refs ----
+    var urlInput = document.getElementById('portfolio-url');
     var runBtn = document.getElementById('run-btn');
     var btnText = runBtn.querySelector('.btn-text');
     var statusText = document.getElementById('status-text');
@@ -14,6 +15,7 @@
     var streamingCursor = document.getElementById('streaming-cursor');
     var errorContainer = document.getElementById('error-container');
     var errorMessage = document.getElementById('error-message');
+    var sourceDesc = document.querySelector('#step-source .pipeline-desc');
 
     var stepSource = document.getElementById('step-source');
     var stepExtract = document.getElementById('step-extract');
@@ -45,6 +47,16 @@
         fullMarkdown = '';
     }
 
+    function markComplete() {
+        state = 'complete';
+        setPipeline('analyze', 'complete');
+        streamingCursor.classList.remove('visible');
+        runBtn.disabled = false;
+        runBtn.classList.remove('loading');
+        btnText.textContent = 'Run Again';
+        statusText.textContent = 'Analysis complete.';
+    }
+
     // ---- Extraction preview toggle ----
     extractToggle.addEventListener('click', function () {
         var isOpen = extractPreview.classList.contains('open');
@@ -55,30 +67,21 @@
     // ---- Minimal markdown to HTML ----
     function markdownToHtml(md) {
         var html = md
-            // Horizontal rules
             .replace(/^---+$/gm, '<hr>')
-            // Headers
             .replace(/^######\s+(.+)$/gm, '<h6>$1</h6>')
             .replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>')
             .replace(/^####\s+(.+)$/gm, '<h4>$1</h4>')
             .replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
             .replace(/^##\s+(.+)$/gm, '<h2>$1</h2>')
             .replace(/^#\s+(.+)$/gm, '<h1>$1</h1>')
-            // Bold
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-            // Italic
             .replace(/\*(.+?)\*/g, '<em>$1</em>')
-            // Blockquotes
             .replace(/^>\s+(.+)$/gm, '<blockquote><p>$1</p></blockquote>')
-            // Unordered list items
             .replace(/^[-*]\s+(.+)$/gm, '<li>$1</li>')
-            // Ordered list items
             .replace(/^\d+\.\s+(.+)$/gm, '<li>$1</li>');
 
-        // Wrap consecutive <li> in <ul>
         html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
 
-        // Paragraphs: wrap lines that aren't already tags
         var lines = html.split('\n');
         var result = [];
         for (var i = 0; i < lines.length; i++) {
@@ -96,11 +99,11 @@
     }
 
     // ---- API: Extract portfolio ----
-    function extractPortfolio() {
+    function extractPortfolio(url) {
         return fetch('/api/extract', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ url: 'https://snhertzman.com/portfolio' }),
+            body: JSON.stringify({ url: url }),
         })
         .then(function (res) {
             if (!res.ok) return res.json().then(function (d) { throw new Error(d.error || 'Extraction failed'); });
@@ -134,7 +137,7 @@
 
                     buffer += decoder.decode(result.value, { stream: true });
                     var lines = buffer.split('\n');
-                    buffer = lines.pop(); // keep incomplete line in buffer
+                    buffer = lines.pop();
 
                     for (var i = 0; i < lines.length; i++) {
                         var line = lines[i].trim();
@@ -170,19 +173,32 @@
     function runDemo() {
         if (state === 'extracting' || state === 'analyzing') return;
 
+        var url = urlInput.value.trim();
+        if (!url) {
+            urlInput.focus();
+            return;
+        }
+
         resetAll();
         state = 'extracting';
         runBtn.disabled = true;
+        urlInput.disabled = true;
         runBtn.classList.add('loading');
         btnText.textContent = 'Running...';
         statusText.textContent = 'Extracting portfolio content via Tabstack...';
 
+        // Update pipeline source card to show the entered URL
+        try {
+            sourceDesc.textContent = new URL(url).hostname;
+        } catch (e) {
+            sourceDesc.textContent = url;
+        }
+
         setPipeline('source', 'complete');
         setPipeline('extract', 'active');
 
-        extractPortfolio()
+        extractPortfolio(url)
             .then(function (markdown) {
-                // Show extraction preview
                 setPipeline('extract', 'complete');
                 var wordCount = markdown.split(/\s+/).length;
                 var sectionCount = (markdown.match(/^#{1,3}\s/gm) || []).length;
@@ -190,7 +206,6 @@
                 extractContent.textContent = markdown.length > 2000 ? markdown.slice(0, 2000) + '\n\n[truncated for preview]' : markdown;
                 extractPreview.hidden = false;
 
-                // Start analysis
                 state = 'analyzing';
                 statusText.textContent = 'Streaming Claude analysis...';
                 setPipeline('analyze', 'active');
@@ -200,15 +215,18 @@
                 return analyzeCandidate(markdown);
             })
             .then(function () {
-                state = 'complete';
-                setPipeline('analyze', 'complete');
-                streamingCursor.classList.remove('visible');
-                runBtn.disabled = false;
-                runBtn.classList.remove('loading');
-                btnText.textContent = 'Run Again';
-                statusText.textContent = 'Analysis complete.';
+                urlInput.disabled = false;
+                markComplete();
             })
             .catch(function (err) {
+                urlInput.disabled = false;
+
+                // If the stream was cut but we already have content, treat as complete
+                if (state === 'analyzing' && fullMarkdown) {
+                    markComplete();
+                    return;
+                }
+
                 state = 'error';
                 streamingCursor.classList.remove('visible');
                 errorMessage.textContent = err.message || 'Something went wrong. Please try again.';
@@ -218,8 +236,7 @@
                 btnText.textContent = 'Try Again';
                 statusText.textContent = '';
 
-                // Mark whatever step failed
-                if (state === 'extracting' || !fullMarkdown) {
+                if (!fullMarkdown) {
                     setPipeline('extract', null);
                 } else {
                     setPipeline('analyze', null);
