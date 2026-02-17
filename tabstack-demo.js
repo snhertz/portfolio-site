@@ -44,6 +44,7 @@
         streamingCursor.classList.remove('visible');
         errorContainer.style.display = 'none';
         statusText.textContent = '';
+        descSource.textContent = 'Candidate page';
         fullMarkdown = '';
     }
 
