@@ -69,38 +69,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        // Create status element for inline feedback
+        const formStatus = document.createElement('div');
+        formStatus.className = 'form-status';
+        contactForm.appendChild(formStatus);
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const submitBtnText = submitBtn.textContent;
+
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            // Basic validation
             if (!name || !email || !message) {
-                alert('Please fill out all fields');
+                formStatus.textContent = 'Please fill out all fields.';
+                formStatus.className = 'form-status error';
                 return;
             }
 
-            // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address');
+                formStatus.textContent = 'Please enter a valid email address.';
+                formStatus.className = 'form-status error';
                 return;
             }
 
-            // For now, just show success message
-            // TODO: Set up actual form submission backend
-            alert('Thanks for reaching out! I will be in touch shortly.');
-            contactForm.reset();
+            // Set loading state
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = 'Sending...';
+            formStatus.className = 'form-status';
+            formStatus.textContent = '';
 
-            // In production, you would send this to a backend:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({ name, email, message })
-            // });
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    formStatus.textContent = 'Thanks for reaching out! I\'ll be in touch shortly.';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent = data.error || 'Something went wrong. Please try again.';
+                    formStatus.className = 'form-status error';
+                }
+            } catch (err) {
+                formStatus.textContent = 'Unable to send message. Please try again later.';
+                formStatus.className = 'form-status error';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+                submitBtn.textContent = submitBtnText;
+            }
         });
     }
 });
