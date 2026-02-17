@@ -2,7 +2,8 @@
     'use strict';
 
     // ---- DOM refs ----
-    var urlInput = document.getElementById('portfolio-url');
+    var portfolioInput = document.getElementById('portfolio-url');
+    var jobInput = document.getElementById('job-url');
     var runBtn = document.getElementById('run-btn');
     var btnText = runBtn.querySelector('.btn-text');
     var statusText = document.getElementById('status-text');
@@ -15,26 +16,28 @@
     var streamingCursor = document.getElementById('streaming-cursor');
     var errorContainer = document.getElementById('error-container');
     var errorMessage = document.getElementById('error-message');
-    var sourceDesc = document.querySelector('#step-source .pipeline-desc');
 
-    var stepSource = document.getElementById('step-source');
-    var stepExtract = document.getElementById('step-extract');
+    var descPortfolio = document.getElementById('desc-portfolio');
+    var descJob = document.getElementById('desc-job');
+
+    var stepPortfolio = document.getElementById('step-portfolio');
+    var stepJob = document.getElementById('step-job');
     var stepAnalyze = document.getElementById('step-analyze');
 
-    var state = 'idle'; // idle | extracting | analyzing | complete | error
+    var state = 'idle';
     var fullMarkdown = '';
 
     // ---- Pipeline helpers ----
     function setPipeline(step, className) {
-        var el = { source: stepSource, extract: stepExtract, analyze: stepAnalyze }[step];
+        var el = { portfolio: stepPortfolio, job: stepJob, analyze: stepAnalyze }[step];
         if (!el) return;
         el.classList.remove('active', 'complete');
         if (className) el.classList.add(className);
     }
 
     function resetAll() {
-        setPipeline('source', null);
-        setPipeline('extract', null);
+        setPipeline('portfolio', null);
+        setPipeline('job', null);
         setPipeline('analyze', null);
         extractPreview.hidden = true;
         extractPreview.classList.remove('open');
@@ -42,7 +45,7 @@
         resultsContainer.hidden = true;
         resultsBody.innerHTML = '';
         streamingCursor.classList.remove('visible');
-        errorContainer.hidden = true;
+        errorContainer.style.display = 'none';
         statusText.textContent = '';
         fullMarkdown = '';
     }
@@ -55,6 +58,16 @@
         runBtn.classList.remove('loading');
         btnText.textContent = 'Run Again';
         statusText.textContent = 'Analysis complete.';
+    }
+
+    function setInputsDisabled(disabled) {
+        portfolioInput.disabled = disabled;
+        jobInput.disabled = disabled;
+    }
+
+    function hostnameFrom(url) {
+        try { return new URL(url).hostname; }
+        catch (e) { return url; }
     }
 
     // ---- Extraction preview toggle ----
@@ -98,8 +111,8 @@
         return result.join('\n');
     }
 
-    // ---- API: Extract portfolio ----
-    function extractPortfolio(url) {
+    // ---- API: Extract URL via Tabstack ----
+    function extractUrl(url) {
         return fetch('/api/extract', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -116,11 +129,11 @@
     }
 
     // ---- API: Analyze candidate (streaming) ----
-    function analyzeCandidate(markdown) {
+    function analyzeCandidate(portfolioMarkdown, jobMarkdown) {
         return fetch('/api/analyze', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ markdown: markdown }),
+            body: JSON.stringify({ markdown: portfolioMarkdown, jobMarkdown: jobMarkdown }),
         })
         .then(function (res) {
             if (!res.ok) return res.json().then(function (d) { throw new Error(d.error || 'Analysis failed'); });
@@ -171,57 +184,72 @@
 
     // ---- Run demo orchestrator ----
     function runDemo() {
-        if (state === 'extracting' || state === 'analyzing') return;
+        if (state === 'extracting-portfolio' || state === 'extracting-job' || state === 'analyzing') return;
 
-        var url = urlInput.value.trim();
-        if (!url) {
-            urlInput.focus();
-            return;
-        }
+        var portfolioUrl = portfolioInput.value.trim();
+        var jobUrl = jobInput.value.trim();
+
+        if (!portfolioUrl) { portfolioInput.focus(); return; }
+        if (!jobUrl) { jobInput.focus(); return; }
 
         resetAll();
-        state = 'extracting';
+        state = 'extracting-portfolio';
         runBtn.disabled = true;
-        urlInput.disabled = true;
+        setInputsDisabled(true);
         runBtn.classList.add('loading');
         btnText.textContent = 'Running...';
-        statusText.textContent = 'Extracting portfolio content via Tabstack...';
 
-        // Update pipeline source card to show the entered URL
-        try {
-            sourceDesc.textContent = new URL(url).hostname;
-        } catch (e) {
-            sourceDesc.textContent = url;
-        }
+        // Update pipeline descriptions
+        descPortfolio.textContent = hostnameFrom(portfolioUrl);
+        descJob.textContent = hostnameFrom(jobUrl);
 
-        setPipeline('source', 'complete');
-        setPipeline('extract', 'active');
+        var portfolioMarkdown = '';
+        var jobMarkdown = '';
 
-        extractPortfolio(url)
-            .then(function (markdown) {
-                setPipeline('extract', 'complete');
-                var wordCount = markdown.split(/\s+/).length;
-                var sectionCount = (markdown.match(/^#{1,3}\s/gm) || []).length;
-                extractStats.textContent = wordCount.toLocaleString() + ' words \u00b7 ' + sectionCount + ' sections';
-                extractContent.textContent = markdown.length > 2000 ? markdown.slice(0, 2000) + '\n\n[truncated for preview]' : markdown;
+        // Step 1: Extract portfolio
+        statusText.textContent = 'Extracting candidate portfolio via Tabstack...';
+        setPipeline('portfolio', 'active');
+
+        extractUrl(portfolioUrl)
+            .then(function (md) {
+                portfolioMarkdown = md;
+                setPipeline('portfolio', 'complete');
+
+                // Step 2: Extract job description
+                state = 'extracting-job';
+                statusText.textContent = 'Extracting job description via Tabstack...';
+                setPipeline('job', 'active');
+
+                return extractUrl(jobUrl);
+            })
+            .then(function (md) {
+                jobMarkdown = md;
+                setPipeline('job', 'complete');
+
+                // Show extraction preview (combined)
+                var combined = portfolioMarkdown + '\n\n---\n\n' + jobMarkdown;
+                var wordCount = combined.split(/\s+/).length;
+                extractStats.textContent = wordCount.toLocaleString() + ' words extracted from both pages';
+                extractContent.textContent = combined.length > 3000 ? combined.slice(0, 3000) + '\n\n[truncated for preview]' : combined;
                 extractPreview.hidden = false;
 
+                // Step 3: Claude analysis
                 state = 'analyzing';
                 statusText.textContent = 'Streaming Claude analysis...';
                 setPipeline('analyze', 'active');
                 resultsContainer.hidden = false;
                 streamingCursor.classList.add('visible');
 
-                return analyzeCandidate(markdown);
+                return analyzeCandidate(portfolioMarkdown, jobMarkdown);
             })
             .then(function () {
-                urlInput.disabled = false;
+                setInputsDisabled(false);
                 markComplete();
             })
             .catch(function (err) {
-                urlInput.disabled = false;
+                setInputsDisabled(false);
 
-                // If the stream was cut but we already have content, treat as complete
+                // If stream cut but we have content, treat as complete
                 if (state === 'analyzing' && fullMarkdown) {
                     markComplete();
                     return;
@@ -230,14 +258,16 @@
                 state = 'error';
                 streamingCursor.classList.remove('visible');
                 errorMessage.textContent = err.message || 'Something went wrong. Please try again.';
-                errorContainer.hidden = false;
+                errorContainer.style.display = 'flex';
                 runBtn.disabled = false;
                 runBtn.classList.remove('loading');
                 btnText.textContent = 'Try Again';
                 statusText.textContent = '';
 
-                if (!fullMarkdown) {
-                    setPipeline('extract', null);
+                if (!portfolioMarkdown) {
+                    setPipeline('portfolio', null);
+                } else if (!jobMarkdown) {
+                    setPipeline('job', null);
                 } else {
                     setPipeline('analyze', null);
                 }
