@@ -426,25 +426,72 @@ main {
 /* Work sample slot */
 .work-sample-slot {
     min-height: 0;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
 }
 
 .work-sample-slot:empty {
     display: none;
 }
 
-.work-sample-slot a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--green-primary);
-    text-decoration: none;
-    transition: gap var(--transition-fast);
+.work-sample-slot h4 {
+    margin-bottom: 14px;
 }
 
-.work-sample-slot a:hover {
+.work-sample-slot .sample-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.work-sample-slot .sample-list a {
+    display: flex;
+    align-items: center;
     gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.work-sample-slot .sample-list a:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--green-primary);
+}
+
+.work-sample-slot .sample-list a::before {
+    content: '';
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--text-muted);
+    border-radius: 4px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b6b6b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3C/svg%3E") center / 10px no-repeat;
+    transition: border-color var(--transition-fast);
+}
+
+.work-sample-slot .sample-list a:hover::before {
+    border-color: var(--green-primary);
+}
+
+.work-sample-slot .sample-list a span {
+    flex: 1;
+}
+
+.work-sample-slot .sample-list a .sample-arrow {
+    flex: none;
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.work-sample-slot .sample-list a:hover .sample-arrow {
+    color: var(--green-primary);
+    transform: translateX(3px);
 }
 
 /* ===================================
