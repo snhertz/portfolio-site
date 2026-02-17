@@ -124,7 +124,9 @@
         })
         .then(function (data) {
             if (!data.success) throw new Error(data.error || 'Extraction failed');
-            return data.markdown;
+            var md = data.markdown || '';
+            if (!md.trim()) throw new Error('Tabstack returned empty content for this URL. The page may require JavaScript rendering.');
+            return md;
         });
     }
 
