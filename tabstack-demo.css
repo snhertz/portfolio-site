@@ -194,14 +194,12 @@ main {
 }
 
 /* ===================================
-   URL INPUTS
+   URL INPUT
    =================================== */
 
-.url-inputs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 44px;
+.url-input-wrap {
+    max-width: 560px;
+    margin: 0 auto 44px;
     animation: fadeInUp 0.7s ease-out 0.1s both;
 }
 
@@ -698,9 +696,8 @@ main {
         font-size: 15px;
     }
 
-    .url-inputs {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .url-input-wrap {
+        margin-bottom: 36px;
     }
 
     .url-field {

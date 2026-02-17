@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabstack + Claude: Live Candidate Fit Analysis | Nick Hertzman</title>
-    <meta name="description" content="Live demo: Tabstack extracts a candidate portfolio and job description, Claude analyzes the fit in real time.">
+    <meta name="description" content="Live demo: Tabstack extracts portfolio content, Claude analyzes candidate fit for Mozilla's Founding GTM Lead role.">
     <meta name="robots" content="noindex, nofollow">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,44 +25,38 @@
             <div class="hero-inner">
                 <span class="hero-badge">Live Product Demo</span>
                 <h1 class="hero-title">Tabstack + Claude:<br>Candidate Fit Analysis</h1>
-                <p class="hero-subtitle">Enter a candidate portfolio and a job description. Tabstack extracts both pages into structured markdown, then Claude streams a real-time fit analysis.</p>
-                <p class="hero-meta">Built by Nick Hertzman &middot; Powered by Tabstack &amp; Claude</p>
+                <p class="hero-subtitle">This page uses Tabstack's extraction API to pull structured content from a portfolio, then streams it through Claude for real-time candidate fit analysis against the Tabstack Founding GTM Lead role.</p>
+                <p class="hero-meta">Nick Hertzman &middot; Founding GTM Lead &middot; Mozilla Tabstack</p>
             </div>
         </header>
 
-        <!-- ========== URL INPUTS ========== -->
-        <div class="url-inputs">
+        <!-- ========== URL INPUT ========== -->
+        <div class="url-input-wrap">
             <div class="url-field">
                 <label class="url-label" for="portfolio-url">
                     <span class="url-label-icon">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     </span>
-                    Candidate Portfolio
+                    Candidate Portfolio URL
                 </label>
                 <input class="url-input" type="url" id="portfolio-url" value="https://snhertzman.com/portfolio" placeholder="https://example.com/portfolio" spellcheck="false" autocomplete="off">
-            </div>
-            <div class="url-field">
-                <label class="url-label" for="job-url">
-                    <span class="url-label-icon">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                    </span>
-                    Job Description
-                </label>
-                <input class="url-input" type="url" id="job-url" value="https://www.mozilla.org/en-US/careers/position/gh_005486/" placeholder="https://example.com/careers/role" spellcheck="false" autocomplete="off">
             </div>
         </div>
 
         <!-- ========== PIPELINE ========== -->
         <section class="pipeline">
-            <div class="pipeline-card" id="step-portfolio">
+            <div class="pipeline-card" id="step-source">
                 <div class="pipeline-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
                     </svg>
                 </div>
-                <h3 class="pipeline-label">Portfolio Extract</h3>
-                <p class="pipeline-desc" id="desc-portfolio">Candidate page</p>
+                <h3 class="pipeline-label">Portfolio Page</h3>
+                <p class="pipeline-desc" id="desc-source">snhertzman.com/portfolio</p>
             </div>
             <div class="pipeline-arrow">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -70,15 +64,16 @@
                     <polyline points="12 5 19 12 12 19"/>
                 </svg>
             </div>
-            <div class="pipeline-card" id="step-job">
+            <div class="pipeline-card" id="step-extract">
                 <div class="pipeline-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
                     </svg>
                 </div>
-                <h3 class="pipeline-label">Job Description Extract</h3>
-                <p class="pipeline-desc" id="desc-job">Role page</p>
+                <h3 class="pipeline-label">Tabstack Extract</h3>
+                <p class="pipeline-desc">Markdown extraction API</p>
             </div>
             <div class="pipeline-arrow">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
