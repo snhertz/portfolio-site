@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Ads Growth Strategy for Community Phone | Nick Hertzman</title>
+    <meta name="description" content="A channel strategy, testing framework, and creative sprint for acquiring caregiver buyers through Meta.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="community-phone-assignment.css">
+</head>
+<body>
+    <!-- Fixed Header Bar -->
+    <div class="fixed-header"></div>
+
+    <!-- Persistent Path to $100K Bar -->
+    <div class="path-bar" id="pathBar">
+        <div class="path-bar-inner">
+            <span class="path-bar-label">Path to $5K MRR (90 days)</span>
+            <div class="path-bar-track">
+                <div class="path-bar-fill" id="pathBarFill"></div>
+            </div>
+            <span class="path-bar-value" id="pathBarValue">$0</span>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="page-wrapper">
+
+        <!-- ===== SECTION 1: HERO ===== -->
+        <section class="section hero-section" id="hero">
+            <div class="container">
+                <div class="hero-badge">Take-Home Assignment</div>
+                <h1 class="hero-title">Meta Ads Growth Strategy for <span class="highlight">Community Phone</span></h1>
+                <p class="hero-subtitle">A channel strategy, testing framework, and creative sprint for acquiring caregiver buyers through Meta</p>
+                <div class="hero-meta">
+                    <span class="hero-meta-item">Nick Hertzman</span>
+                    <span class="hero-meta-divider">/</span>
+                    <span class="hero-meta-item">Growth Lead, Acquisition</span>
+                    <span class="hero-meta-divider">/</span>
+                    <span class="hero-meta-item">February 2026</span>
+                </div>
+                <p class="hero-intro">This assignment covers why Meta is the right channel, who the buyer is, how I'd test it, and the actual creative I'd launch on day one. Every assumption is sourced, every test has kill criteria, and the calculator below lets you stress-test the unit economics yourself.</p>
+                <a href="#why-meta" class="scroll-cta">
+                    <span>Explore the strategy</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: WHY META ===== -->
+        <section class="section" id="why-meta">
+            <div class="container">
+                <h2 class="section-title">Why Meta</h2>
+                <p class="section-description">No other social platform comes close for daily engagement with women 50+. The audience lives on Facebook, they respond to ads, and comparable industries prove the channel-audience match works.</p>
+
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number">74%</div>
+                        <div class="stat-label">Adults 50-64 on Facebook</div>
+                        <div class="stat-detail">55-64 year-olds spend 45 min/day — more than any other age group <a href="https://www.demandsage.com/facebook-statistics/" target="_blank" rel="noopener noreferrer" class="source-inline">DemandSage</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122M5.98 11.95l-2.12 2.12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number">22%</div>
+                        <div class="stat-label">Higher CTR for Women 50+</div>
+                        <div class="stat-detail">Women click ~15 ads/month on Facebook vs. 12 for average users <a href="https://blog.semcasting.com/why-50-women-are-the-facebook-demographic-of-choice" target="_blank" rel="noopener noreferrer" class="source-inline">Semcasting</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number">9.21%</div>
+                        <div class="stat-label">CVR in Senior Living</div>
+                        <div class="stat-detail">Comparable industries targeting similar demographics on Meta <a href="https://www.cardinaldigitalmarketing.com/healthcare-case-study/senior-living-digital-marketing/" target="_blank" rel="noopener noreferrer" class="source-inline">Cardinal Digital</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="stat-number">3.7x</div>
+                        <div class="stat-label">LTV:CAC at $300 Target</div>
+                        <div class="stat-detail">~$1,100 LTV at $55/mo and 5% churn. Above the 3x viability threshold.</div>
+                    </div>
+                </div>
+
+                <!-- Evidence subsections -->
+                <div class="evidence-grid">
+                    <div class="evidence-block">
+                        <h4>The audience lives on Facebook</h4>
+                        <ul>
+                            <li>74% of adults 50-64 use Facebook; 57% of 65+ <a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener noreferrer" class="source-inline">Pew 2025</a></li>
+                            <li>88% of Baby Boomers use Facebook; 96% of those access it weekly <a href="https://sproutsocial.com/insights/new-social-media-demographics/" target="_blank" rel="noopener noreferrer" class="source-inline">Sprout Social</a></li>
+                            <li>Compare to TikTok: only 30% of 50-64 and 5% of 65+ <a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener noreferrer" class="source-inline">Pew 2025</a></li>
+                        </ul>
+                    </div>
+                    <div class="evidence-block">
+                        <h4>Highest-performing ad audience</h4>
+                        <ul>
+                            <li>Women 50+ have a 22% higher CTR than any other Facebook demographic <a href="https://blog.semcasting.com/why-50-women-are-the-facebook-demographic-of-choice" target="_blank" rel="noopener noreferrer" class="source-inline">Semcasting</a></li>
+                            <li>People aged 55-64 are 2x as likely to engage with sponsored ads <a href="https://generationsnow.net/facebook-advertising-to-seniors/" target="_blank" rel="noopener noreferrer" class="source-inline">Generations Now</a></li>
+                            <li>AARP: Facebook ads to 50+ achieved CTRs "at twice the industry average" <a href="https://advertise.aarp.org/50-insights/aarp-makes-case-for-older-audiences" target="_blank" rel="noopener noreferrer" class="source-inline">AARP</a></li>
+                        </ul>
+                    </div>
+                    <div class="evidence-block">
+                        <h4>Comparable industries prove it</h4>
+                        <ul>
+                            <li><strong>Senior living:</strong> 9.21% CVR and $18.68 CPA on Facebook <a href="https://www.cardinaldigitalmarketing.com/healthcare-case-study/senior-living-digital-marketing/" target="_blank" rel="noopener noreferrer" class="source-inline">Cardinal Digital</a></li>
+                            <li><strong>AARP campaigns:</strong> 11% CTR and 61% CVR targeting 50+ <a href="https://www.llamaleadgen.com/case-studies/arrp-conversion-rate-optimization/" target="_blank" rel="noopener noreferrer" class="source-inline">Llama Lead Gen</a></li>
+                            <li><strong>Clinical trials (60+):</strong> 3.37% CTR, outperformed direct mail 3.5x <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5803529/" target="_blank" rel="noopener noreferrer" class="source-inline">NIH/PMC</a></li>
+                        </ul>
+                    </div>
+                    <div class="evidence-block">
+                        <h4>Why not other channels</h4>
+                        <ul>
+                            <li><strong>TikTok:</strong> Only 11% of users are 50+. Not viable as primary. <a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener noreferrer" class="source-inline">Pew 2025</a></li>
+                            <li><strong>Podcasts:</strong> 22% of 55+ listen monthly, but $18-45 CPMs and slower feedback.</li>
+                            <li><strong>Direct mail:</strong> $500-3,000 CPM and weeks-to-months learning cycles.</li>
+                            <li><strong>TV:</strong> Consumer Cellular spends $202M/year. Not at CP's scale. <a href="https://www.statista.com/statistics/1538755/consumer-cellular-medium-ad-spend-us/" target="_blank" rel="noopener noreferrer" class="source-inline">Statista</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Prior test callout -->
+                <div class="callout-block">
+                    <h4>Addressing the prior Meta test</h4>
+                    <p>Community Phone has tested Meta before with CPAs of $600-900. Given the strength of the evidence above, $600-900 CPAs suggest an execution issue, not a channel-audience mismatch. Bringing CPAs into range requires rigorous creative testing, dialed-in targeting data, third-party intent data, and creative-to-landing-page continuity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: THE CAREGIVER BUYER ===== -->
+        <section class="section" id="persona">
+            <div class="container">
+                <h2 class="section-title">The Caregiver Buyer</h2>
+                <p class="section-description">The woman managing care and living decisions for her aging parent.</p>
+
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <h3>Women 50+ managing care and living decisions for an aging parent (70+)</h3>
+                            <p class="persona-subtitle">The family member who handles technology, health, and day-to-day decisions for an older loved one</p>
+                        </div>
+                    </div>
+                    <div class="persona-details persona-details-3col">
+                        <div class="persona-detail">Has likely already tried giving her parent a smartphone. It didn't work.</div>
+                        <div class="persona-detail">Worried about scam calls, emergency access, and staying connected</div>
+                        <div class="persona-detail">She buys it, sets it up, and manages the account. The end-user is the parent.</div>
+                    </div>
+                </div>
+
+                <!-- Customer quotes -->
+                <div class="quotes-grid">
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <p>I have bought two services for my 90 year old parents</p>
+                        <span class="quote-source">— Trustpilot Review</span>
+                    </div>
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <p>My mom loved her community phone. It was super easy to set up</p>
+                        <span class="quote-source">— Trustpilot Review</span>
+                    </div>
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <p>We set a landline up for my 94 year old granny</p>
+                        <span class="quote-source">— Trustpilot Review</span>
+                    </div>
+                </div>
+
+                <div class="two-col-blocks">
+                    <div class="col-block">
+                        <h4>Why this segment responds on Meta</h4>
+                        <ul>
+                            <li><strong>She lives on Facebook.</strong> 74% of adults 50-64 use Facebook <a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener noreferrer" class="source-inline">Pew 2025</a>. 55-64 year-olds spend 45 min/day <a href="https://www.demandsage.com/facebook-statistics/" target="_blank" rel="noopener noreferrer" class="source-inline">DemandSage</a>.</li>
+                            <li><strong>She responds to emotional, story-driven creative.</strong> Reviews use words like "relief," "answer to prayer," "peace of mind."</li>
+                            <li><strong>The trigger event is already in her feed.</strong> She's managing phone struggles, worrying about scam calls, posting in caregiver groups.</li>
+                        </ul>
+                    </div>
+                    <div class="col-block">
+                        <h4>Why NOT a broader persona</h4>
+                        <ul>
+                            <li><strong>"Seniors"</strong> targets the end-user, not the buyer</li>
+                            <li><strong>"Families"</strong> is too vague to target or write creative for</li>
+                            <li><strong>B2B segments</strong> require different creative and offer architecture — a separate test</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: HYPOTHESIS & SUCCESS CRITERIA ===== -->
+        <section class="section" id="hypothesis">
+            <div class="container">
+                <h2 class="section-title">Hypothesis & Success Criteria</h2>
+                <p class="section-description">Every test starts with a falsifiable hypothesis and clear kill criteria. Here's what we're testing and how we'll know if it works.</p>
+
+                <blockquote class="hypothesis-block">
+                    "If we launch Meta targeting women 50+ making phone decisions for aging parents, testing 3 caregiver pain points (usability, safety, scam protection) across funny and serious creative tones — each paired with a landing page that continues the specific emotional thread from the ad — we expect blended CAC at or below $300 and payback within 5-6 months, producing $5K+ incremental MRR within 90 days."
+                </blockquote>
+
+                <!-- Pain points and tones matrix -->
+                <div class="matrix-section">
+                    <h3 class="subsection-title">What We're Testing</h3>
+                    <p class="subsection-desc">3 pain points &times; 2 creative tones = a matrix that isolates which combination creates a pattern interrupt for this buyer.</p>
+
+                    <div class="pain-tone-grid">
+                        <div class="pain-card">
+                            <div class="pain-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <h4>"Mom can't use a cell phone"</h4>
+                            <p>The buyer has already tried and failed with a smartphone</p>
+                        </div>
+                        <div class="pain-card">
+                            <div class="pain-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <h4>"Alone without a way to call"</h4>
+                            <p>Safety and emergency access — the quiet fear caregivers carry</p>
+                        </div>
+                        <div class="pain-card">
+                            <div class="pain-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <h4>"Getting scammed on the phone"</h4>
+                            <p>Robocalls targeting elderly parents — $2.7B lost last year</p>
+                        </div>
+                    </div>
+
+                    <div class="tone-cards">
+                        <div class="tone-card">
+                            <span class="tone-badge funny">Funny</span>
+                            <p>Recognition humor ("oh my god, that's MY mom"). Warm, relatable, shareable.</p>
+                        </div>
+                        <div class="tone-card">
+                            <span class="tone-badge serious">Serious</span>
+                            <p>Emotional weight. The quiet fear caregivers carry but rarely see reflected in advertising.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Metrics Table -->
+                <div class="metrics-table-section">
+                    <h3 class="subsection-title">Success Metrics</h3>
+                    <p class="subsection-desc"><strong>Primary KPI:</strong> Blended CAC (total Meta spend / total new paying customers). <strong>Target:</strong> &le;$300.</p>
+
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Benchmark</th>
+                                    <th>What It Diagnoses</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>CTR</strong></td>
+                                    <td>0.9-1.5%</td>
+                                    <td>Creative resonance. Below 0.9% = creative problem, not audience.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>LP Conversion Rate</strong></td>
+                                    <td>5-12%</td>
+                                    <td>Offer/page quality.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Trial-to-Paid</strong></td>
+                                    <td>10-20%</td>
+                                    <td>Product-market fit for this audience.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cost per Lead</strong></td>
+                                    <td>$15-30</td>
+                                    <td>Funnel efficiency.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Meta Churn vs. Google</strong></td>
+                                    <td>Within 1.5x</td>
+                                    <td>Lead quality.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Incremental MRR</strong></td>
+                                    <td>$5K+ in 90 days</td>
+                                    <td>Business impact.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Kill Criteria -->
+                <div class="kill-criteria-section">
+                    <h3 class="subsection-title">Kill Criteria</h3>
+                    <div class="kill-list">
+                        <div class="kill-item">
+                            <span class="kill-label">Channel</span>
+                            <p>CAC above $600 after both creative sprints with lookalikes &rarr; kill.</p>
+                        </div>
+                        <div class="kill-item">
+                            <span class="kill-label">Creative</span>
+                            <p>CTR below 0.5% after $1K and 7 days &rarr; kill and replace.</p>
+                        </div>
+                        <div class="kill-item">
+                            <span class="kill-label">Audience</span>
+                            <p>Both interest and lookalike produce CAC above $600 for same creative &rarr; creative is the problem.</p>
+                        </div>
+                        <div class="kill-item">
+                            <span class="kill-label">Lead Quality</span>
+                            <p>Trial-to-paid below 5% after 500+ trials &rarr; kill. Meta churn 2x+ Google after 60 days &rarr; kill or reposition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 30-day success criteria -->
+                <div class="success-checklist-section">
+                    <h3 class="subsection-title">30-Day Success Criteria</h3>
+                    <p class="subsection-desc">What I need to see to double down:</p>
+                    <div class="checklist">
+                        <div class="check-item">At least one concept producing CAC &le;$400</div>
+                        <div class="check-item">At least one concept with CTR above 1.0%</div>
+                        <div class="check-item">LP CVR above 4%</div>
+                        <div class="check-item">50+ trials generated</div>
+                        <div class="check-item">Clear performance separation between concepts</div>
+                        <div class="check-item">Lookalikes outperforming interest targeting</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: TEST MECHANICS ===== -->
+        <section class="section" id="mechanics">
+            <div class="container">
+                <h2 class="section-title">Test Mechanics</h2>
+                <p class="section-description">How the budget flows, how the tests are structured, and how we make decisions.</p>
+
+                <!-- Budget allocation timeline -->
+                <div class="budget-timeline">
+                    <div class="budget-phase">
+                        <div class="budget-phase-header">
+                            <span class="budget-phase-label">Month 1</span>
+                            <span class="budget-phase-amount">$15-20K</span>
+                        </div>
+                        <ul>
+                            <li>Weeks 1-2: Launch scam calls sprint (hero + 3 variants) across lookalike and interest audiences</li>
+                            <li>Weeks 3-4: Second sprint testing a new pain point using winning tone and format</li>
+                            <li>20% retargeting throughout</li>
+                        </ul>
+                    </div>
+                    <div class="budget-phase">
+                        <div class="budget-phase-header">
+                            <span class="budget-phase-label">Month 2</span>
+                            <span class="budget-phase-amount">$25-35K</span>
+                        </div>
+                        <ul>
+                            <li>Scale if Month 1 hits 30-day criteria</li>
+                            <li>Concentrate on winning pain point + tone</li>
+                            <li>Build new variants within winners</li>
+                        </ul>
+                    </div>
+                    <div class="budget-phase">
+                        <div class="budget-phase-header">
+                            <span class="budget-phase-label">Month 3</span>
+                            <span class="budget-phase-amount">$40-50K</span>
+                        </div>
+                        <ul>
+                            <li>Scale if unit economics hold</li>
+                            <li>Layer in offer testing on winning creative</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Week 1-2 Ad Set Table -->
+                <h3 class="subsection-title">Week 1-2 Structure: Scam Calls Sprint</h3>
+                <p class="subsection-desc">Each variant runs against both lookalike and interest audiences to test creative and audience simultaneously.</p>
+
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Ad Set</th>
+                                <th>Audience</th>
+                                <th>Creative</th>
+                                <th>$/Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Lookalike (1-3%)</td>
+                                <td>Hero: Funny group chat</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lookalike (1-3%)</td>
+                                <td>V1: Serious group chat</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Lookalike (1-3%)</td>
+                                <td>V2: Solo text post</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Lookalike (1-3%)</td>
+                                <td>V3: Direct offer</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Interest (caregiving, AARP)</td>
+                                <td>Hero: Funny group chat</td>
+                                <td>~$75</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Interest</td>
+                                <td>V1: Serious group chat</td>
+                                <td>~$75</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Broad (50+, female)</td>
+                                <td>Top 2 from days 1-5</td>
+                                <td>~$75</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Retargeting</td>
+                                <td>Winning variant</td>
+                                <td>~$75</td>
+                            </tr>
+                            <tr class="table-total-row">
+                                <td colspan="3"><strong>Total: ~$800/day = ~$5,600/week = ~$11,200 first two weeks</strong></td>
+                                <td><strong>$800</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Weeks 3-4 -->
+                <div class="callout-block" style="margin-top: 32px;">
+                    <h4>Weeks 3-4: Second Pain Point Sprint</h4>
+                    <p>Based on scam sprint learnings, build creative for the next pain point using winning variables. If funny won, test "Mom can't use a cell phone." If serious won, test "Alone without a way to call." Apply the same hero + 3 variant structure. This gives us reads across two pain points by end of Month 1.</p>
+                </div>
+
+                <!-- Disentangling Table -->
+                <h3 class="subsection-title" style="margin-top: 48px;">Disentangling Channel vs. Creative vs. Execution</h3>
+
+                <div class="table-wrapper">
+                    <table class="data-table diagnostic-table">
+                        <thead>
+                            <tr>
+                                <th>Signal</th>
+                                <th>Diagnosis</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Low CTR (&lt;0.5%) across all 4 variants</td>
+                                <td>The scam hook isn't stopping thumbs</td>
+                                <td>Move to weeks 3-4 pain point sprint early. Still failing &rarr; kill channel.</td>
+                            </tr>
+                            <tr>
+                                <td>Good CTR (&gt;1%) + low LP CVR (&lt;2%)</td>
+                                <td>Ads work, LP doesn't convert</td>
+                                <td>Test LP variants: headline, offer, layout. Hold creative constant.</td>
+                            </tr>
+                            <tr>
+                                <td>Good CTR + good CVR + low trial-to-paid (&lt;5%)</td>
+                                <td>Product/offer mismatch</td>
+                                <td>Test offers: trial length, hardware discount, money-back guarantee.</td>
+                            </tr>
+                            <tr>
+                                <td>Hero and V1 perform very differently</td>
+                                <td>Tone matters</td>
+                                <td>Apply winning tone to weeks 3-4 sprint.</td>
+                            </tr>
+                            <tr>
+                                <td>V2 (solo text) outperforms Hero</td>
+                                <td>Format matters more than expected</td>
+                                <td>Use solo text format for second pain point sprint.</td>
+                            </tr>
+                            <tr>
+                                <td>V3 outperforms Hero on CAC</td>
+                                <td>Direct offer qualifies clicks</td>
+                                <td>Put the offer in the ad for all future creative.</td>
+                            </tr>
+                            <tr>
+                                <td>Lookalikes beat interest by &gt;30% on CAC</td>
+                                <td>Data infrastructure thesis confirmed</td>
+                                <td>Scale lookalikes. Test 3-5% and 5-10% windows.</td>
+                            </tr>
+                            <tr>
+                                <td>Strong shares/comments but low conversion</td>
+                                <td>False positive (engagement &ne; intent)</td>
+                                <td>Evaluate on CAC only. Funny creative is most at risk.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Month-by-Month Decision Tree -->
+                <h3 class="subsection-title" style="margin-top: 48px;">Month-by-Month Decision Tree</h3>
+
+                <div class="table-wrapper">
+                    <table class="data-table decision-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="best-case">Best Case</th>
+                                <th class="okay-case">Okay Case</th>
+                                <th class="bad-case">Bad Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Month 1</strong><br><span class="table-muted">$15-20K</span></td>
+                                <td>1-2 concepts &le;$400 CAC &rarr; scale to $25-35K</td>
+                                <td>One below $600, trending down &rarr; continue at current budget</td>
+                                <td>All above $600, no differentiation &rarr; pause, rethink creative</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Month 2</strong><br><span class="table-muted">$35-50K</span></td>
+                                <td>Winner &le;$300 &rarr; scale to $40-50K, begin offer testing</td>
+                                <td>Winner $300-400 &rarr; maintain, focus on LP/offer optimization</td>
+                                <td>Still above $400 &rarr; kill</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Month 3</strong><br><span class="table-muted">$75-100K</span></td>
+                                <td>Blended CAC &le;$300, $5K+ MRR, clear playbook. Meta is validated.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Speed of Testing -->
+                <div class="speed-section">
+                    <h3 class="subsection-title">Speed of Testing</h3>
+                    <div class="speed-grid">
+                        <div class="speed-item">
+                            <span class="speed-label">Cycle</span>
+                            <p>Weekly creative cycles: ship Monday, review Friday</p>
+                        </div>
+                        <div class="speed-item">
+                            <span class="speed-label">Minimum</span>
+                            <p>7-day minimum per test, $500-1K minimum spend before reading results</p>
+                        </div>
+                        <div class="speed-item">
+                            <span class="speed-label">Maximum</span>
+                            <p>No test runs longer than 14 days without a go/no-go decision</p>
+                        </div>
+                        <div class="speed-item">
+                            <span class="speed-label">Discipline</span>
+                            <p>All tests have a pre-registered hypothesis before launch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: META GROWTH CALCULATOR ===== -->
+        <section class="section calculator-section" id="calculator">
+            <div class="container">
+                <h2 class="section-title">Meta Growth Calculator</h2>
+                <p class="section-description">Stress-test the unit economics. Every slider is tunable. Defaults match the testing plan above (~$800/day across 8 ad sets). Adjust any input and watch projected outcomes update in real time.</p>
+
+                <!-- Global Controls -->
+                <div class="global-controls">
+                    <div class="global-control">
+                        <label>Planning Horizon</label>
+                        <select id="globalHorizon">
+                            <option value="12" selected>12 Weeks (~90 Days)</option>
+                            <option value="20">20 Weeks</option>
+                            <option value="26">26 Weeks (~6 Months)</option>
+                        </select>
+                    </div>
+                    <div class="global-control">
+                        <label>Week-over-Week Spend Growth</label>
+                        <div class="slider-group">
+                            <input type="range" id="globalGrowth" min="0" max="15" step="0.5" value="5">
+                            <span class="slider-value" id="globalGrowthValue">5.0%</span>
+                        </div>
+                    </div>
+                    <div class="global-control">
+                        <label>Max Monthly Spend Cap</label>
+                        <div class="slider-group">
+                            <input type="range" id="globalSpendCap" min="10000" max="200000" step="5000" value="50000">
+                            <span class="slider-value" id="globalSpendCapValue">$50,000</span>
+                        </div>
+                    </div>
+                    <div class="global-control scenario-control">
+                        <label>Scenario Presets</label>
+                        <div class="scenario-buttons">
+                            <div class="scenario-btn-wrapper">
+                                <button class="scenario-btn" data-scenario="conservative">Conservative</button>
+                                <div class="scenario-tooltip">Worst-case ramp. CPM $16, CTR 0.7%, LP CVR 3.5%, 8% trial-to-paid, 6% churn, 2% WoW growth. Models a slow start where nothing clicks early.</div>
+                            </div>
+                            <div class="scenario-btn-wrapper">
+                                <button class="scenario-btn active" data-scenario="base">Base</button>
+                                <div class="scenario-tooltip">Below-benchmark assumptions. CPM $14, CTR 1.0%, LP CVR 5.0%, 10% trial-to-paid, 5% churn, 5% WoW growth. Realistic for a new channel.</div>
+                            </div>
+                            <div class="scenario-btn-wrapper">
+                                <button class="scenario-btn" data-scenario="aggressive">Aggressive</button>
+                                <div class="scenario-tooltip">Hitting benchmark midpoints. CPM $12, CTR 1.2%, LP CVR 6.0%, 13% trial-to-paid, 4% churn, 7% WoW growth. Upside case where testing lands early.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meta Input Panel -->
+                <div class="channel-panel-single">
+                    <div class="panel-header meta">
+                        <h3>Meta Ads</h3>
+                        <p>Caregiver targeting (women 50+) via carousel, video, and static creative formats</p>
+                    </div>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Weekly Starting Spend</label>
+                            <div class="slider-group">
+                                <input type="range" class="channel-input" data-metric="weeklySpend" min="1000" max="100000" step="500" value="5600">
+                                <span class="slider-value">$5,600</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>CPM <span class="benchmark">Benchmark: $10-15</span></label>
+                            <div class="slider-group">
+                                <input type="range" class="channel-input" data-metric="cpm" min="3" max="40" step="0.5" value="14">
+                                <span class="slider-value">$14.00</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>CTR <span class="benchmark">Benchmark: 0.9-1.5%</span></label>
+                            <div class="slider-group">
+                                <input type="range" class="channel-input" data-metric="ctr" min="0.1" max="5" step="0.1" value="1.0">
+                                <span class="slider-value">1.0%</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Landing Page CVR <span class="benchmark">Benchmark: 5-12%</span></label>
+                            <div class="slider-group">
+                                <input type="range" class="channel-input" data-metric="lpCvr" min="1" max="25" step="0.5" value="5.0">
+                                <span class="slider-value">5.0%</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Trial-to-Paid CVR <span class="benchmark">Benchmark: 10-20%</span></label>
+                            <div class="slider-group">
+                                <input type="range" class="channel-input" data-metric="trialCvr" min="1" max="40" step="1" value="10">
+                                <span class="slider-value">10%</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Monthly Churn Rate <span class="benchmark">Benchmark: 3-7%</span></label>
+                            <div class="slider-group">
+                                <input type="range" class="channel-input" data-metric="churn" min="1" max="15" step="0.5" value="5">
+                                <span class="slider-value">5.0%</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Avg Monthly Revenue / Customer</label>
+                            <div class="slider-group">
+                                <input type="range" class="channel-input" data-metric="avgRevenue" min="10" max="150" step="1" value="55">
+                                <span class="slider-value">$55</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output Dashboard -->
+                <div class="dashboard">
+                    <h3 class="dashboard-title">Projected Outcomes</h3>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Total New MRR</div>
+                            <div class="metric-value" id="metricMRR">$0</div>
+                            <div class="metric-sublabel">at end of horizon</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Blended CAC</div>
+                            <div class="metric-value" id="metricCAC">$0</div>
+                            <div class="metric-sublabel">cost per customer</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Blended LTV</div>
+                            <div class="metric-value" id="metricLTV">$0</div>
+                            <div class="metric-sublabel">lifetime value</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">LTV : CAC</div>
+                            <div class="metric-value" id="metricRatio">0x</div>
+                            <div class="metric-sublabel">target: 3x+</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Payback Period</div>
+                            <div class="metric-value" id="metricPayback">0 mo</div>
+                            <div class="metric-sublabel">months to recover CAC</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Total New Customers</div>
+                            <div class="metric-value" id="metricCustomers">0</div>
+                            <div class="metric-sublabel">active at end of horizon</div>
+                        </div>
+                    </div>
+
+                    <!-- Target Indicator -->
+                    <div class="target-indicator" id="targetIndicator">
+                        <div class="target-icon" id="targetIcon"></div>
+                        <div class="target-text">
+                            <div class="target-headline" id="targetHeadline">Calculating...</div>
+                            <div class="target-detail" id="targetDetail"></div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue Chart -->
+                    <div class="chart-container">
+                        <h4 class="chart-title">Cumulative New MRR by Week</h4>
+                        <div class="chart-wrapper">
+                            <canvas id="revenueChart" width="900" height="400"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Funnel Breakdown -->
+                    <div class="funnel-container">
+                        <h4 class="chart-title">Funnel Breakdown <span class="funnel-period">(cumulative over horizon)</span></h4>
+                        <table class="funnel-table" id="funnelTable">
+                            <thead>
+                                <tr>
+                                    <th>Channel</th>
+                                    <th>Total Spend</th>
+                                    <th>Impressions</th>
+                                    <th></th>
+                                    <th>Clicks</th>
+                                    <th></th>
+                                    <th>Leads</th>
+                                    <th></th>
+                                    <th>Customers</th>
+                                </tr>
+                            </thead>
+                            <tbody id="funnelBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: CREATIVE ASSETS ===== -->
+        <section class="section" id="creative">
+            <div class="container">
+                <h2 class="section-title">Creative Assets</h2>
+                <p class="section-description">The actual ads I'd launch on day one. A hero creative plus three variants, each isolating a single variable to generate clear learnings.</p>
+
+                <!-- Ad Copy Framework -->
+                <div class="framework-grid">
+                    <div class="framework-card">
+                        <h4>Primary Text</h4>
+                        <p>~125 chars visible before "See more" on mobile. Hook must land in the first line. First-person testimonial voice builds trust with women 50+.</p>
+                    </div>
+                    <div class="framework-card">
+                        <h4>Headline</h4>
+                        <p>25-40 characters ideal. Benefit-oriented or offer-driven. Headlines above 50 chars see 25-30% CTR drops. Not shown on all placements.</p>
+                    </div>
+                    <div class="framework-card">
+                        <h4>Description</h4>
+                        <p>Grey text below headline, desktop only. ~5-15% of impressions show this. Best use: risk reversal, secondary social proof, urgency.</p>
+                    </div>
+                    <div class="framework-card">
+                        <h4>CTA Button</h4>
+                        <p>"Learn More" = 22.5% higher CTR (cold audiences). "Sign Up" = 14.5% higher CVR (retargeting/offer-driven variants).</p>
+                    </div>
+                </div>
+
+                <!-- Creative Cards -->
+                <div class="creative-tabs">
+                    <button class="creative-tab active" data-creative="hero">Hero</button>
+                    <button class="creative-tab" data-creative="v1">V1: Tone</button>
+                    <button class="creative-tab" data-creative="v2">V2: Format</button>
+                    <button class="creative-tab" data-creative="v3">V3: Offer</button>
+                </div>
+
+                <!-- Hero Creative -->
+                <div class="creative-panel active" id="creative-hero">
+                    <div class="creative-header">
+                        <span class="creative-badge baseline">Baseline</span>
+                        <h3>The Family Group Chat (Funny)</h3>
+                        <p class="creative-desc">A carousel ad showing a family group chat where Mom texts her kids about "the nicest call from Social Security," describing every scam red flag as a positive. The kids panic. Mom reveals she's kidding — but the call was real.</p>
+                    </div>
+                    <div class="creative-carousel" id="heroCarousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <img src="images/funny-screen-1.png" alt="Hero creative slide 1: Mom describes the scam call" class="creative-img">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/funny-screen-2.png" alt="Hero creative slide 2: The kids react, Mom reveals she's kidding" class="creative-img">
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev" data-carousel="heroCarousel" aria-label="Previous slide">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15l-5-5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <div class="carousel-dots">
+                                <span class="carousel-dot active" data-slide="0" data-carousel="heroCarousel"></span>
+                                <span class="carousel-dot" data-slide="1" data-carousel="heroCarousel"></span>
+                            </div>
+                            <button class="carousel-btn carousel-next" data-carousel="heroCarousel" aria-label="Next slide">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="creative-copy-grid">
+                        <div class="copy-field primary-text">
+                            <span class="copy-label">Primary Text</span>
+                            <p>Scam calls are getting smarter. AI is making them harder to spot, even for people who know better. Community Phone blocks scam calls before they ever ring — and you can see who's calling from the app. Get the phone free with an annual plan.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Headline</span>
+                            <p>Get the phone free. Block every scam call.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Description</span>
+                            <p>No contracts. Cancel anytime.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">CTA</span>
+                            <p>Learn More</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- V1: Tone Flip -->
+                <div class="creative-panel" id="creative-v1">
+                    <div class="creative-header">
+                        <span class="creative-badge tone">Tone Variable</span>
+                        <h3>Tone Flip: Funny &rarr; Serious</h3>
+                        <p class="creative-desc">Same format (group chat), same pain point (scam calls), different emotional register. Does this audience convert better through humor or fear?</p>
+                    </div>
+                    <div class="creative-image-single">
+                        <img src="images/serious.png" alt="V1 creative: Serious family group chat about scam calls" class="creative-img">
+                    </div>
+                    <div class="creative-copy-grid">
+                        <div class="copy-field primary-text">
+                            <span class="copy-label">Primary Text</span>
+                            <p>Americans lost $2.7 billion to phone scams last year. Your parents are the #1 target. Community Phone blocks scam calls before they ever ring — and you can see who's calling from the app. Get the phone free with an annual plan.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Headline</span>
+                            <p>It only takes one call.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Description</span>
+                            <p>No contracts. Cancel anytime.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">CTA</span>
+                            <p>Learn More</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- V2: Format Change -->
+                <div class="creative-panel" id="creative-v2">
+                    <div class="creative-header">
+                        <span class="creative-badge format">Format Variable</span>
+                        <h3>Format Change: Group Chat &rarr; Solo Text Post</h3>
+                        <p class="creative-desc">Same pain point, same tone, different visual format. Does a multi-character group chat outperform a solo first-person post?</p>
+                    </div>
+                    <div class="creative-image-single">
+                        <img src="images/solo-text.png" alt="V2 creative: Solo text post about scam calls" class="creative-img">
+                    </div>
+                    <div class="creative-copy-grid">
+                        <div class="copy-field primary-text">
+                            <span class="copy-label">Primary Text</span>
+                            <p>Community Phone. It blocks scam calls before they ever ring — she doesn't have to stop answering because the scam calls just don't come through. You can see who's calling from the app. Get the phone free with an annual plan.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Headline</span>
+                            <p>Get the phone free. Block every scam call.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Description</span>
+                            <p>No contracts. Cancel anytime.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">CTA</span>
+                            <p>Learn More</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- V3: Offer Change -->
+                <div class="creative-panel" id="creative-v3">
+                    <div class="creative-header">
+                        <span class="creative-badge offer">Offer Variable</span>
+                        <h3>Offer Change: Free Hardware &rarr; First Month Free</h3>
+                        <p class="creative-desc">Same solo text post visual, same hook. Does a different offer structure change who clicks and whether they convert? Hero offers free hardware (higher commitment). This variant offers first month free (lower barrier).</p>
+                    </div>
+                    <div class="creative-image-single">
+                        <img src="images/solo-text.png" alt="V3 creative: Solo text post with different offer" class="creative-img">
+                    </div>
+                    <div class="creative-copy-grid">
+                        <div class="copy-field primary-text">
+                            <span class="copy-label">Primary Text</span>
+                            <p>Scam calls are getting smarter. AI is making them harder to spot, even for people who know better. Community Phone blocks scam calls before they ever ring — and you can see who's calling from the app. First month free. No contracts, cancel anytime.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Headline</span>
+                            <p>First month free. Block every scam call.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">Description</span>
+                            <p>No contracts. No internet needed.</p>
+                        </div>
+                        <div class="copy-field">
+                            <span class="copy-label">CTA</span>
+                            <p>Sign Up</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 8: RATIONALE ===== -->
+        <section class="section" id="rationale">
+            <div class="container">
+                <h2 class="section-title">Rationale</h2>
+                <p class="section-description">Why this creative direction, what each variant tests, and what the outcomes mean.</p>
+
+                <!-- Hero Rationale -->
+                <div class="rationale-hero-card">
+                    <h3>Hero Creative Rationale</h3>
+                    <div class="rationale-grid">
+                        <div class="rationale-item">
+                            <h4>Insight</h4>
+                            <p>Customer reviews revealed phone scams targeting elderly parents as a top purchase trigger. Caregivers describe universal frustration — their parent answers every call because of generational conditioning. The scam details come directly from FTC and AARP documentation.</p>
+                        </div>
+                        <div class="rationale-item">
+                            <h4>Assumptions</h4>
+                            <ul>
+                                <li>The buyer scrolls Facebook daily and recognizes this situation instantly</li>
+                                <li>A group chat screenshot looks like organic content, not an ad</li>
+                                <li>Warm humor generates shares and tags that lower effective CPA</li>
+                                <li>The "Lol I'm kidding" twist makes Mom the hero, not the victim</li>
+                                <li>Scam blocking is concrete and deliverable</li>
+                            </ul>
+                        </div>
+                        <div class="rationale-item">
+                            <h4>Confidence</h4>
+                            <ul>
+                                <li>Group chat screenshots routinely get 500K-700K+ likes organically on Facebook</li>
+                                <li>Scam topic connects to a specific product feature, strengthening the creative-to-LP handoff</li>
+                                <li>Creative is grounded in real customer language and real scammer behavior</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Variant Rationales -->
+                <div class="variant-rationale-grid">
+                    <div class="variant-rationale-card">
+                        <span class="creative-badge tone">Tone</span>
+                        <h4>Variant 1: Humor vs. Fear</h4>
+                        <p>The most valuable test — the answer sets the tone for all future creative.</p>
+                        <ul>
+                            <li>Hero wins on CAC &rarr; humor works even for heavy topics. Lean funny.</li>
+                            <li>V1 wins despite lower CTR &rarr; the audience wants empathy. Lean serious.</li>
+                        </ul>
+                    </div>
+                    <div class="variant-rationale-card">
+                        <span class="creative-badge format">Format</span>
+                        <h4>Variant 2: Visual Format</h4>
+                        <p>Tests whether the format matters or the message is enough.</p>
+                        <ul>
+                            <li>Group chat wins &rarr; invest in multi-character visual storytelling</li>
+                            <li>Solo post wins &rarr; produce creative at scale (writing is faster)</li>
+                        </ul>
+                    </div>
+                    <div class="variant-rationale-card">
+                        <span class="creative-badge offer">Offer</span>
+                        <h4>Variant 3: Offer Structure</h4>
+                        <p>Free hardware with annual commitment vs. first month free with no contracts.</p>
+                        <ul>
+                            <li>Hero wins &rarr; higher-value offer attracts more committed buyers</li>
+                            <li>V3 wins &rarr; lower barrier drives more volume</li>
+                            <li>V3 high CTR but worse CAC &rarr; "no contracts" attracts window shoppers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Testing Mechanics Summary -->
+                <div class="rationale-summary">
+                    <div class="summary-item">
+                        <h4>Decision Metric</h4>
+                        <p>CAC is the only decision metric. CTR = did the hook work. LP CVR = did the LP continue the story. Trial-to-paid = did the product deliver.</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>False Positives</h4>
+                        <p>High shares/comments but low conversion, especially on the funny hero. If any variant shows CTR above 2% but CAC above $600, it's a false positive.</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Kill vs. Double Down</h4>
+                        <p>All 4 above $600 CAC after $1K+ each &rarr; kill the concept, test a different pain point. 1-2 outperform &rarr; reallocate 60%+ budget, build new variants within the winning variable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FINAL NOTES ===== -->
+        <section class="section" id="final-notes">
+            <div class="container">
+                <h2 class="section-title">Final Notes</h2>
+                <div class="final-notes">
+                    <p>This assignment focuses on Meta because I believe it's the channel that can be tested, optimized, and scaled the quickest for Community Phone's caregiver buyer. But it's far from the only opportunity.</p>
+                    <p>In addition to exploring Meta and potentially other performance channels, I think there's real potential in partner marketing. A company like <strong>Atria Senior Living</strong> is a natural fit. The brands serve the same audience from different angles, and a partnership could start with co-marketed content or bundled offers. Down the line, there's an even bigger play: a co-sell motion where Community Phone becomes the default landline in senior living communities. That turns a marketing partnership into a distribution channel.</p>
+                    <p>There are a ton of channels worth exploring. This is just the one I'd start with because it gives us the fastest feedback loop and the clearest path to proving unit economics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOURCES ===== -->
+        <section class="section" id="sources">
+            <div class="container">
+                <h2 class="section-title">Sources</h2>
+
+                <div class="sources-grid">
+                    <a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener noreferrer" class="source-link">Pew Research — Americans' Social Media Use 2025</a>
+                    <a href="https://www.aarp.org/pri/topics/technology/internet-media-devices/2026-technology-trends-older-adults/" target="_blank" rel="noopener noreferrer" class="source-link">AARP — 2026 Technology Trends for Older Adults</a>
+                    <a href="https://www.demandsage.com/facebook-statistics/" target="_blank" rel="noopener noreferrer" class="source-link">DemandSage — Facebook Statistics 2026</a>
+                    <a href="https://blog.semcasting.com/why-50-women-are-the-facebook-demographic-of-choice" target="_blank" rel="noopener noreferrer" class="source-link">Semcasting — Why 50+ Women Are the Facebook Demographic of Choice</a>
+                    <a href="https://www.uproas.io/blog/facebook-ads-statistics" target="_blank" rel="noopener noreferrer" class="source-link">uProas — Facebook Ads Statistics 2026</a>
+                    <a href="https://sproutsocial.com/insights/new-social-media-demographics/" target="_blank" rel="noopener noreferrer" class="source-link">Sprout Social — Social Media Demographics</a>
+                    <a href="https://www.cardinaldigitalmarketing.com/healthcare-case-study/senior-living-digital-marketing/" target="_blank" rel="noopener noreferrer" class="source-link">Cardinal Digital Marketing — Senior Living Case Study</a>
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5803529/" target="_blank" rel="noopener noreferrer" class="source-link">NIH/PMC — Facebook for Clinical Trial Recruitment</a>
+                    <a href="https://www.llamaleadgen.com/case-studies/arrp-conversion-rate-optimization/" target="_blank" rel="noopener noreferrer" class="source-link">Llama Lead Gen — AARP Conversion Rate Optimization</a>
+                    <a href="https://pixis.ai/blog/meta-lookalike-audiences/" target="_blank" rel="noopener noreferrer" class="source-link">Pixis — Meta Lookalike Audiences</a>
+                    <a href="https://www.smartbugmedia.com/blog/facebook-ads-senior-care-communities" target="_blank" rel="noopener noreferrer" class="source-link">SmartBug Media — Facebook Ads for Senior Care</a>
+                    <a href="https://evradvertising.com/2021/12/02/role-of-adult-child-senior-living-buying-cycle/" target="_blank" rel="noopener noreferrer" class="source-link">EVR Advertising — Adult Child in Senior Buying Cycle</a>
+                    <a href="https://www.statista.com/statistics/1538755/consumer-cellular-medium-ad-spend-us/" target="_blank" rel="noopener noreferrer" class="source-link">Statista — Consumer Cellular Ad Spend</a>
+                    <a href="https://www.trustpilot.com/review/communityphone.org" target="_blank" rel="noopener noreferrer" class="source-link">Trustpilot — Community Phone Reviews (1,169 reviews, 4.7/5)</a>
+                    <a href="https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams" target="_blank" rel="noopener noreferrer" class="source-link">FTC — Avoiding and Reporting Gift Card Scams</a>
+                    <a href="https://www.aarp.org/money/scams-fraud/info-2020/retiree-loses-35k-in-gift-cards.html" target="_blank" rel="noopener noreferrer" class="source-link">AARP — Gift Card Scam Investigations</a>
+                    <a href="https://generationsnow.net/facebook-advertising-to-seniors/" target="_blank" rel="noopener noreferrer" class="source-link">Generations Now — Facebook Advertising to Seniors</a>
+                    <a href="https://advertise.aarp.org/50-insights/aarp-makes-case-for-older-audiences" target="_blank" rel="noopener noreferrer" class="source-link">AARP — The Case for Older Audiences</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>Built by Nick Hertzman &middot; February 2026 &middot; <a href="index.html">Back to Portfolio</a></p>
+        </footer>
+
+    </div>
+
+    <script src="community-phone-assignment.js"></script>
+</body>
+</html>

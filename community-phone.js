@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
         meta: {
             name: 'Meta Ads',
             color: '#1877F2',
-            weeklySpend: 5775,
+            weeklySpend: 4000,
             cpm: 14,
-            ctr: 1.3,
-            lpCvr: 6.5,
-            trialCvr: 12,
-            churn: 7,
-            avgRevenue: 70
+            ctr: 1.0,
+            lpCvr: 5.0,
+            trialCvr: 10,
+            churn: 5,
+            avgRevenue: 55
         },
         tiktok: {
             name: 'TikTok Ads',
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ctr: 0.5,
             lpCvr: 3,
             trialCvr: 8,
-            churn: 7,
-            avgRevenue: 70
+            churn: 6,
+            avgRevenue: 55
         },
         influencer: {
             name: 'Influencer / Affiliate',
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ctr: 1.8,
             lpCvr: 9,
             trialCvr: 16,
-            churn: 5,
-            avgRevenue: 70
+            churn: 4,
+            avgRevenue: 55
         },
         youtube: {
             name: 'YouTube Ads',
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ctr: 0.5,
             lpCvr: 4,
             trialCvr: 9,
-            churn: 6,
-            avgRevenue: 70
+            churn: 5,
+            avgRevenue: 55
         },
         ctv: {
             name: 'CTV / OTT',
@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ctr: 0.05,
             lpCvr: 3,
             trialCvr: 8,
-            churn: 6,
-            avgRevenue: 70
+            churn: 5,
+            avgRevenue: 55
         }
     };
 
@@ -70,40 +70,40 @@ document.addEventListener('DOMContentLoaded', function () {
         conservative: {
             globalGrowth: 2,
             channels: {
-                meta:       { weeklySpend: 2500,  cpm: 16,  ctr: 0.7,  lpCvr: 3.5, trialCvr: 10, churn: 8,  avgRevenue: 70 },
-                tiktok:     { weeklySpend: 1000,  cpm: 12,  ctr: 0.4,  lpCvr: 2.5, trialCvr: 6,  churn: 9,  avgRevenue: 70 },
-                influencer: { weeklySpend: 750,   cpm: 20,  ctr: 1.5,  lpCvr: 7,   trialCvr: 12, churn: 6,  avgRevenue: 70 },
-                youtube:    { weeklySpend: 1500,  cpm: 7,   ctr: 0.45, lpCvr: 3,   trialCvr: 7,  churn: 7,  avgRevenue: 70 },
-                ctv:        { weeklySpend: 1500,  cpm: 50,  ctr: 0.03, lpCvr: 2.5, trialCvr: 6,  churn: 7,  avgRevenue: 70 }
+                meta:       { weeklySpend: 3000,  cpm: 16,  ctr: 0.7,  lpCvr: 3.5, trialCvr: 8,  churn: 6,  avgRevenue: 55 },
+                tiktok:     { weeklySpend: 1000,  cpm: 12,  ctr: 0.4,  lpCvr: 2.5, trialCvr: 6,  churn: 7,  avgRevenue: 55 },
+                influencer: { weeklySpend: 750,   cpm: 20,  ctr: 1.5,  lpCvr: 7,   trialCvr: 12, churn: 5,  avgRevenue: 55 },
+                youtube:    { weeklySpend: 1500,  cpm: 7,   ctr: 0.45, lpCvr: 3,   trialCvr: 7,  churn: 6,  avgRevenue: 55 },
+                ctv:        { weeklySpend: 1500,  cpm: 50,  ctr: 0.03, lpCvr: 2.5, trialCvr: 6,  churn: 6,  avgRevenue: 55 }
             }
         },
         base: {
             globalGrowth: 5,
             channels: {
-                meta:       { weeklySpend: 5775,  cpm: 14, ctr: 1.3,  lpCvr: 6.5,  trialCvr: 12, churn: 7, avgRevenue: 70 },
-                tiktok:     { weeklySpend: 1500,  cpm: 10, ctr: 0.5,  lpCvr: 3,  trialCvr: 8,  churn: 7, avgRevenue: 70 },
-                influencer: { weeklySpend: 1000,  cpm: 18, ctr: 1.8,  lpCvr: 9,  trialCvr: 16, churn: 5, avgRevenue: 70 },
-                youtube:    { weeklySpend: 2250,  cpm: 6,  ctr: 0.5,  lpCvr: 4,  trialCvr: 9,  churn: 6, avgRevenue: 70 },
-                ctv:        { weeklySpend: 2500,  cpm: 40, ctr: 0.05, lpCvr: 3,  trialCvr: 8,  churn: 6, avgRevenue: 70 }
+                meta:       { weeklySpend: 4000,  cpm: 14, ctr: 1.0,  lpCvr: 5.0,  trialCvr: 10, churn: 5, avgRevenue: 55 },
+                tiktok:     { weeklySpend: 1500,  cpm: 10, ctr: 0.5,  lpCvr: 3,  trialCvr: 8,  churn: 6, avgRevenue: 55 },
+                influencer: { weeklySpend: 1000,  cpm: 18, ctr: 1.8,  lpCvr: 9,  trialCvr: 16, churn: 4, avgRevenue: 55 },
+                youtube:    { weeklySpend: 2250,  cpm: 6,  ctr: 0.5,  lpCvr: 4,  trialCvr: 9,  churn: 5, avgRevenue: 55 },
+                ctv:        { weeklySpend: 2500,  cpm: 40, ctr: 0.05, lpCvr: 3,  trialCvr: 8,  churn: 5, avgRevenue: 55 }
             }
         },
         aggressive: {
             globalGrowth: 7,
             channels: {
-                meta:       { weeklySpend: 5500,  cpm: 12, ctr: 1.2,  lpCvr: 8,   trialCvr: 15, churn: 5, avgRevenue: 70 },
-                tiktok:     { weeklySpend: 2250,  cpm: 8,  ctr: 0.8,  lpCvr: 5,   trialCvr: 10, churn: 6, avgRevenue: 70 },
-                influencer: { weeklySpend: 1500,  cpm: 15, ctr: 2.5,  lpCvr: 12,  trialCvr: 20, churn: 4, avgRevenue: 70 },
-                youtube:    { weeklySpend: 3000,  cpm: 4,  ctr: 0.65, lpCvr: 6,   trialCvr: 12, churn: 5, avgRevenue: 70 },
-                ctv:        { weeklySpend: 3500,  cpm: 30, ctr: 0.08, lpCvr: 4.5, trialCvr: 10, churn: 5, avgRevenue: 70 }
+                meta:       { weeklySpend: 5000,  cpm: 12, ctr: 1.2,  lpCvr: 6.0,  trialCvr: 13, churn: 4, avgRevenue: 55 },
+                tiktok:     { weeklySpend: 2250,  cpm: 8,  ctr: 0.8,  lpCvr: 5,   trialCvr: 10, churn: 5, avgRevenue: 55 },
+                influencer: { weeklySpend: 1500,  cpm: 15, ctr: 2.5,  lpCvr: 12,  trialCvr: 20, churn: 3, avgRevenue: 55 },
+                youtube:    { weeklySpend: 3000,  cpm: 4,  ctr: 0.65, lpCvr: 6,   trialCvr: 12, churn: 4, avgRevenue: 55 },
+                ctv:        { weeklySpend: 3500,  cpm: 30, ctr: 0.08, lpCvr: 4.5, trialCvr: 10, churn: 4, avgRevenue: 55 }
             }
         }
     };
 
     const ICE_ITEMS = [
         {
-            initiative: 'Launch Meta Ads for Family/Senior Targeting',
-            desc: 'Carousel + video creative on Facebook & Instagram targeting key demos',
-            rationale: 'Impact 10: Meta has the largest addressable audience in CP\'s core demo (families, 35-65), and could realistically deliver 100% of the $100K goal if executed well. This is the primary bet. Confidence 7: proven platform with deep targeting options, but uncertain how well CP\'s specific offer will convert without testing. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
+            initiative: 'Launch Meta Ads for Caregiver Targeting',
+            desc: 'Carousel + video creative on Facebook & Instagram targeting women 50+ making phone decisions for aging loved ones',
+            rationale: 'Impact 10: Meta has the largest addressable audience in CP\'s core buyer demo (women 50+, caregivers), and could realistically deliver 100% of the $100K goal if executed well. This is the primary bet. Prior basic Meta test produced CPAs 2-3x too high, but lacked lookalike audiences, strong creative hypotheses, and offer testing. Confidence 7: proven platform with deep targeting options and 25K+ customer base for lookalikes, but need to prove the second test outperforms the first. Ease 8: fast to launch, mature ad tools, can be live with initial tests in days.',
             impact: 10, confidence: 7, ease: 8
         },
         {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     let channelEnabled = { meta: true, tiktok: false, influencer: false, youtube: false, ctv: false };
-    let globalBudget = 25000;
+    let globalBudget = 17500;
     let globalHorizon = 26;
     let globalGrowth = 5;
     let globalSpendCap = 50000;
